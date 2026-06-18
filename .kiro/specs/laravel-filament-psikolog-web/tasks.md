@@ -7,21 +7,21 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
 ## Tasks
 
 - [ ] 1. Proje Altyapısı ve Yapılandırma
-  - [-] 1.1 Laravel 11 projesini oluştur ve temel composer paketlerini kur
+  - [x] 1.1 Laravel 11 projesini oluştur ve temel composer paketlerini kur
     - `composer create-project laravel/laravel` ile Laravel 11 projesi oluştur
     - Gerekli paketleri kur: `spatie/laravel-sluggable`, `spatie/laravel-medialibrary`, `spatie/laravel-settings`, `filament/filament`, `filament/spatie-laravel-media-library-plugin`, `bezhansalleh/filament-shield`, `spatie/laravel-sitemap`
     - `.env` dosyasında MySQL 8 bağlantı ayarlarını yapılandır
     - `config/app.php` timezone ve locale ayarlarını tr olarak güncelle
     - _Requirements: 1.1, 1.2, 1.3, 1.4_
 
-  - [~] 1.2 Filament v3 admin panelini ve Shield'ı yapılandır
+  - [-] 1.2 Filament v3 admin panelini ve Shield'ı yapılandır
     - `php artisan filament:install --panels` ile Filament panelini kur
     - Admin panel path'ini `/admin` olarak ayarla
     - `php artisan shield:install` ile Shield'ı kur
     - Admin ve editor rollerini tanımla
     - _Requirements: 1.3, 8.1, 8.2, 8.3_
 
-  - [~] 1.3 Statik asset'leri public/ dizinine taşı
+  - [-] 1.3 Statik asset'leri public/ dizinine taşı
     - `raw_template/HTML/css/`, `js/`, `img/`, `fonts/` dizinlerini `public/css/`, `public/js/`, `public/img/`, `public/fonts/` dizinlerine kopyala
     - Asset dosyalarının doğru yüklendiğini doğrula
     - _Requirements: 1.5, 1.6, 2.1_

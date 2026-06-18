@@ -11,6 +11,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782412622
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781782844443
       }
     ],
     "1.2 Filament v3 admin panelini ve Shield'ı yapılandır": [
@@ -18,6 +23,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389727
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781782849100
       }
     ],
     "1.3 Statik asset'leri public/ dizinine taşı": [
@@ -25,6 +35,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389775
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781782850640
       }
     ],
     "2.1 Services, Categories, Tags migration'larını oluştur": [
