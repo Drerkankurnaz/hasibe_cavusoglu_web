@@ -28,6 +28,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782849100
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783310884
       }
     ],
     "1.3 Statik asset'leri public/ dizinine taşı": [
@@ -40,6 +45,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782850640
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783312438
       }
     ],
     "2.1 Services, Categories, Tags migration'larını oluştur": [
@@ -47,6 +57,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389806
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783318700
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783514283
       }
     ],
     "2.2 Posts ve post_tag pivot migration'larını oluştur": [
@@ -54,6 +74,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389840
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783319057
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783515178
       }
     ],
     "2.3 Testimonials, FAQs, TeamMembers migration'larını oluştur": [
@@ -61,6 +91,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389870
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783320070
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783516095
       }
     ],
     "2.4 Appointments, ContactMessages, Pages migration'larını oluştur": [
@@ -68,6 +108,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389903
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783321018
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783517119
       }
     ],
     "2.5 SiteSettings Spatie settings migration'ını oluştur": [
@@ -75,6 +125,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389937
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783322555
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783518778
       }
     ],
     "3.1 Enum sınıflarını oluştur (PostStatus, AppointmentStatus)": [
@@ -82,6 +142,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782389970
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783529265
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781784705952
       }
     ],
     "3.2 Service, Category, Tag model'lerini oluştur": [
@@ -89,6 +159,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390026
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781784712553
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781785042265
       }
     ],
     "3.3 Post, Testimonial, FAQ model'lerini oluştur": [
@@ -96,6 +176,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390061
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781784713483
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781785043186
       }
     ],
     "3.4 Appointment, ContactMessage, Page, TeamMember model'lerini oluştur": [
@@ -103,6 +193,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390097
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781784715023
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781785044962
       }
     ],
     "3.5 SiteSettings sınıfını oluştur": [
@@ -110,6 +210,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390131
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783530815
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781784707467
       }
     ],
     "4. Checkpoint - Migration ve Model Doğrulaması": [
@@ -117,6 +227,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390164
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781785070313
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787200836
       }
     ],
     "5.1 Master layout (layouts/app.blade.php) oluştur": [
@@ -124,6 +244,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390198
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787218647
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787427467
       }
     ],
     "5.2 Header partial (layouts/partials/header.blade.php) oluştur": [
@@ -131,6 +261,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390231
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787436846
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787652415
       }
     ],
     "5.3 Footer partial (layouts/partials/footer.blade.php) oluştur": [
@@ -138,6 +278,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390270
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787437801
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787653342
       }
     ],
     "5.4 Meta tags ve SEO component'lerini oluştur": [
@@ -145,6 +295,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390305
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787438987
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787654426
       }
     ],
     "6.1 ContactFormMailable oluştur": [
@@ -152,6 +312,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390338
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787219714
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787428395
       }
     ],
     "6.2 Appointment Mailable'larını oluştur": [
@@ -159,6 +329,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390371
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787220959
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787429447
       }
     ],
     "6.3 E-posta hata yönetimi mekanizmasını implement et": [
@@ -166,6 +346,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390404
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787440664
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787655984
       }
     ],
     "7.1 Form Request sınıflarını oluştur": [
@@ -173,6 +363,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390438
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787222540
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787430999
       }
     ],
     "7.2 HomeController ve AboutController oluştur": [
@@ -180,6 +380,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390472
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787661557
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788085425
       }
     ],
     "7.3 ServiceController ve BlogController oluştur": [
@@ -187,6 +397,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390506
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787662591
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788086334
       }
     ],
     "7.4 ContactController ve AppointmentController oluştur": [
@@ -194,6 +414,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390539
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787663486
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788087259
       }
     ],
     "7.5 FaqController, PageController ve SitemapController oluştur": [
@@ -201,6 +431,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390572
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787664613
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788088226
       }
     ],
     "7.6 Route tanımlarını oluştur (routes/web.php)": [
@@ -208,6 +448,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390606
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787666453
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788090064
       }
     ],
     "8. Checkpoint - Controller ve Form İşleme Doğrulaması": [
@@ -215,6 +465,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390638
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788097262
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788434699
       }
     ],
     "9.1 Anasayfa view'ını oluştur (pages/home.blade.php)": [
@@ -222,6 +482,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390672
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788441268
       }
     ],
     "9.2 Hizmetler sayfaları view'larını oluştur": [
@@ -229,6 +494,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390705
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788442260
       }
     ],
     "9.3 Blog sayfaları view'larını oluştur": [
@@ -236,6 +506,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390738
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788443183
       }
     ],
     "9.4 Form sayfalarının view'larını oluştur": [
@@ -243,6 +518,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390774
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788444349
       }
     ],
     "9.5 SSS, Hakkımda ve diğer sayfa view'larını oluştur": [
@@ -250,6 +530,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390807
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788446335
       }
     ],
     "9.6 404 hata sayfasını oluştur": [
@@ -257,6 +542,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390842
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788451888
       }
     ],
     "10.1 ServiceResource ve PostResource oluştur": [
@@ -355,6 +645,48 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391379
+      }
+    ],
+    "1. Proje Altyapısı ve Yapılandırma": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783312492
+      }
+    ],
+    "2. Veritabanı Şeması ve Migration'lar": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781783518853
+      }
+    ],
+    "3. Eloquent Model'ler ve Enum'lar": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781785045048
+      }
+    ],
+    "5. Blade Layout ve Partial'lar": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787654499
+      }
+    ],
+    "6. E-posta Şablonları (Mailable Sınıfları)": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781787656058
+      }
+    ],
+    "7. Form Request'ler ve Public Controller'lar": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788090142
       }
     ]
   }

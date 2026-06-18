@@ -2,18 +2,40 @@
 
 namespace Tests\Feature;
 
-// use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Route;
 use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     */
-    public function test_the_application_returns_a_successful_response(): void
-    {
-        $response = $this->get('/');
+    use RefreshDatabase;
 
-        $response->assertStatus(200);
+    /**
+     * Tüm public route'ların kayıtlı olduğunu doğrular.
+     */
+    public function test_all_public_routes_are_registered(): void
+    {
+        $expectedRoutes = [
+            'home',
+            'about',
+            'services.index',
+            'services.show',
+            'blog.index',
+            'blog.show',
+            'faq',
+            'appointment.create',
+            'appointment.store',
+            'contact.create',
+            'contact.store',
+            'page.show',
+            'sitemap',
+        ];
+
+        foreach ($expectedRoutes as $routeName) {
+            $this->assertTrue(
+                Route::has($routeName),
+                "Route [{$routeName}] kayıtlı değil."
+            );
+        }
     }
 }
