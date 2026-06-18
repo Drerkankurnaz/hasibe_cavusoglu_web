@@ -5,8 +5,9 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\TestimonialResource\Pages;
 use App\Models\Testimonial;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Section;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 
@@ -26,11 +27,11 @@ class TestimonialResource extends Resource
 
     protected static ?int $navigationSort = 5;
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Section::make('Referans Bilgileri')
+        return $schema
+            ->components([
+                Section::make('Referans Bilgileri')
                     ->schema([
                         Forms\Components\TextInput::make('author_name')
                             ->label('Yazar Adı')

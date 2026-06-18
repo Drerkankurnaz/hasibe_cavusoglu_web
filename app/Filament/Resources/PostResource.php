@@ -8,8 +8,9 @@ use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 
@@ -29,20 +30,20 @@ class PostResource extends Resource
 
     protected static ?int $navigationSort = 2;
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Tabs::make('Blog Yazısı')
+        return $schema
+            ->components([
+                Tabs::make('Blog Yazısı')
                     ->tabs([
-                        Forms\Components\Tabs\Tab::make('İçerik')
+                        Tabs\Tab::make('İçerik')
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->label('Başlık')
                                     ->required()
                                     ->maxLength(255)
                                     ->live(onBlur: true)
-                                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => $set('slug', \Illuminate\Support\Str::slug($state))),
+                                    ->afterStateUpdated(fn (\Filament\Schemas\Components\Utilities\Set $set, ?string $state) => $set('slug', \Illuminate\Support\Str::slug($state))),
 
                                 Forms\Components\TextInput::make('slug')
                                     ->label('Slug')
@@ -93,7 +94,7 @@ class PostResource extends Resource
                             ])
                             ->columns(2),
 
-                        Forms\Components\Tabs\Tab::make('Yayın Ayarları')
+                        Tabs\Tab::make('Yayın Ayarları')
                             ->schema([
                                 Forms\Components\Select::make('status')
                                     ->label('Durum')
@@ -111,7 +112,7 @@ class PostResource extends Resource
                                     ->suffix('dakika'),
                             ]),
 
-                        Forms\Components\Tabs\Tab::make('SEO')
+                        Tabs\Tab::make('SEO')
                             ->schema([
                                 Forms\Components\TextInput::make('seo_title')
                                     ->label('SEO Başlık')

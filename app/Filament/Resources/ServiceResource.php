@@ -5,8 +5,9 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\ServiceResource\Pages;
 use App\Models\Service;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Tabs;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 
@@ -26,20 +27,20 @@ class ServiceResource extends Resource
 
     protected static ?int $navigationSort = 1;
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
-                Forms\Components\Tabs::make('Hizmet')
+        return $schema
+            ->components([
+                Tabs::make('Hizmet')
                     ->tabs([
-                        Forms\Components\Tabs\Tab::make('Genel Bilgiler')
+                        Tabs\Tab::make('Genel Bilgiler')
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->label('Başlık')
                                     ->required()
                                     ->maxLength(255)
                                     ->live(onBlur: true)
-                                    ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => $set('slug', \Illuminate\Support\Str::slug($state))),
+                                    ->afterStateUpdated(fn (\Filament\Schemas\Components\Utilities\Set $set, ?string $state) => $set('slug', \Illuminate\Support\Str::slug($state))),
 
                                 Forms\Components\TextInput::make('slug')
                                     ->label('Slug')
@@ -89,7 +90,7 @@ class ServiceResource extends Resource
                             ])
                             ->columns(2),
 
-                        Forms\Components\Tabs\Tab::make('SEO')
+                        Tabs\Tab::make('SEO')
                             ->schema([
                                 Forms\Components\TextInput::make('seo_title')
                                     ->label('SEO Başlık')

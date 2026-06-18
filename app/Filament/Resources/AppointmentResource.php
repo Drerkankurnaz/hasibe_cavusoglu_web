@@ -9,6 +9,11 @@ use App\Mail\AppointmentConfirmedMailable;
 use App\Models\Appointment;
 use App\Models\Service;
 use App\Services\MailService;
+use Filament\Actions\Action;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -16,7 +21,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
-use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 
 class AppointmentResource extends Resource
@@ -92,30 +98,30 @@ class AppointmentResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->label('Ad Soyad')
                     ->searchable()
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('email')
+                TextColumn::make('email')
                     ->label('E-posta')
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('phone')
+                TextColumn::make('phone')
                     ->label('Telefon')
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('service.title')
+                TextColumn::make('service.title')
                     ->label('Hizmet')
                     ->sortable()
                     ->placeholder('Belirtilmedi'),
 
-                Tables\Columns\TextColumn::make('preferred_at')
+                TextColumn::make('preferred_at')
                     ->label('Tercih Edilen Tarih')
                     ->dateTime('d.m.Y H:i')
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('status')
+                TextColumn::make('status')
                     ->label('Durum')
                     ->badge()
                     ->color(fn (string $state): string => match ($state) {
@@ -133,7 +139,7 @@ class AppointmentResource extends Resource
                         default => $state,
                     }),
 
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->label('Oluşturulma')
                     ->dateTime('d.m.Y H:i')
                     ->sortable()
@@ -141,7 +147,7 @@ class AppointmentResource extends Resource
             ])
             ->defaultSort('created_at', 'desc')
             ->filters([
-                Tables\Filters\SelectFilter::make('status')
+                SelectFilter::make('status')
                     ->label('Durum')
                     ->options([
                         AppointmentStatus::Pending->value => 'Beklemede',
@@ -150,12 +156,12 @@ class AppointmentResource extends Resource
                         AppointmentStatus::Completed->value => 'Tamamlandı',
                     ]),
 
-                Tables\Filters\SelectFilter::make('service_id')
+                SelectFilter::make('service_id')
                     ->label('Hizmet')
                     ->options(Service::pluck('title', 'id')),
             ])
             ->actions([
-                Tables\Actions\Action::make('confirm')
+                Action::make('confirm')
                     ->label('Onayla')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -174,7 +180,7 @@ class AppointmentResource extends Resource
                         );
                     }),
 
-                Tables\Actions\Action::make('cancel')
+                Action::make('cancel')
                     ->label('İptal Et')
                     ->icon('heroicon-o-x-circle')
                     ->color('danger')
@@ -193,7 +199,7 @@ class AppointmentResource extends Resource
                         );
                     }),
 
-                Tables\Actions\Action::make('complete')
+                Action::make('complete')
                     ->label('Tamamla')
                     ->icon('heroicon-o-check-badge')
                     ->color('primary')
@@ -206,12 +212,12 @@ class AppointmentResource extends Resource
                         $record->update(['status' => AppointmentStatus::Completed->value]);
                     }),
 
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\ViewAction::make(),
+                EditAction::make(),
+                ViewAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }

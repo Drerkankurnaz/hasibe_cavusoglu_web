@@ -254,50 +254,50 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
     - **Property 8: Meta Tag Fallback Mekanizması**
     - **Validates: Requirements 12.1**
 
-- [ ] 10. Filament Admin Resources
-  - [-] 10.1 ServiceResource ve PostResource oluştur
+- [x] 10. Filament Admin Resources
+  - [x] 10.1 ServiceResource ve PostResource oluştur
     - ServiceResource: title, slug, short_description, description(RichEditor), icon, image(FileUpload), price, duration, order, is_active, SEO fields; reorderable table
     - PostResource: title, slug, category select, tags multi-select, excerpt, body(RichEditor), cover_image(FileUpload), status select, published_at datetime picker, SEO fields; status badge table, publish toggle
     - _Requirements: 6.1, 6.2_
 
-  - [-] 10.2 CategoryResource, TagResource ve TestimonialResource oluştur
+  - [x] 10.2 CategoryResource, TagResource ve TestimonialResource oluştur
     - CategoryResource: name, slug; table posts_count
     - TagResource: name, slug; table posts_count
     - TestimonialResource: author_name, content, rating, is_approved, order; approve toggle, reorderable table
     - _Requirements: 6.3, 6.4_
 
-  - [-] 10.3 FaqResource, PageResource ve TeamMemberResource oluştur
+  - [x] 10.3 FaqResource, PageResource ve TeamMemberResource oluştur
     - FaqResource: question, answer(RichEditor), category, order, is_active; reorderable table, is_active toggle
     - PageResource: title, slug, body(RichEditor), SEO fields; table title/slug
     - TeamMemberResource: name, title, bio, photo(FileUpload), socials(repeater), order, is_active; reorderable table
     - _Requirements: 6.5, 6.8, 6.9_
 
-  - [-] 10.4 AppointmentResource ve ContactMessageResource oluştur
+  - [x] 10.4 AppointmentResource ve ContactMessageResource oluştur
     - AppointmentResource: name, email, phone, service select, preferred_at, status select, notes; table status badge, approve/cancel actions tetikleme email gönderimi
     - ContactMessageResource: Read-only, table (name, subject, is_read badge, created_at), mark-as-read action
     - Status değişikliğinde (confirmed/cancelled) ilgili Mailable gönderimi
     - _Requirements: 6.6, 6.7, 11.4, 11.5_
 
-  - [-] 10.5 SiteSettings yönetim sayfasını oluştur
+  - [x] 10.5 SiteSettings yönetim sayfasını oluştur
     - `app/Filament/Pages/ManageSiteSettings.php` Filament page
     - Tüm SiteSettings property'leri için uygun form field'ları: TextInput, FileUpload (logo/favicon), Textarea, Repeater (working_hours, social_links), RichEditor
     - Kaydetme işlemi sonrası site ayarları güncellenmeli
     - _Requirements: 5.2, 5.3_
 
-  - [~] 10.6 Dashboard widget'larını oluştur
+  - [x] 10.6 Dashboard widget'larını oluştur
     - `PendingAppointmentsWidget`: Bekleyen randevu sayacı
     - `UnreadMessagesWidget`: Okunmamış mesaj sayacı
     - `RecentPostsWidget`: Son 5 yayınlanan blog yazısı listesi
     - Dashboard'a widget'ları kaydet
     - _Requirements: 7.1, 7.2, 7.3_
 
-  - [~] 10.7 Shield policy'lerini yapılandır
+  - [x] 10.7 Shield policy'lerini yapılandır
     - Admin rolü: Tüm resource'lara tam erişim
     - Editor rolü: Post, Category, Tag, FAQ, Testimonial erişimi; Settings, Appointment status değişikliği ve user management kısıtlı
     - Policy dosyalarını oluştur ve resource'lara bağla
     - _Requirements: 8.1, 8.2, 8.3_
 
-- [~] 11. Checkpoint - Admin Panel Doğrulaması
+- [x] 11. Checkpoint - Admin Panel Doğrulaması
   - Tüm Filament resource'larının CRUD işlemlerini doğrula
   - SiteSettings kaydetme ve okuma işlemini doğrula
   - Dashboard widget'larının doğru veri gösterdiğini doğrula
@@ -305,14 +305,14 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 12. Seeder'lar ve Örnek Veriler
-  - [~] 12.1 İçerik seeder'larını oluştur
+  - [-] 12.1 İçerik seeder'larını oluştur
     - ServiceSeeder: En az 6 psikoloji hizmeti (Bireysel Terapi, Çift Terapisi, Aile Terapisi vb.)
     - PostSeeder: En az 3 blog yazısı ilişkili kategori ve tag'larla
     - FaqSeeder: En az 5 SSS kaydı
     - TestimonialSeeder: En az 3 testimonial kaydı
     - _Requirements: 13.1, 13.2, 13.3_
 
-  - [~] 12.2 SiteSettings ve Admin user seeder'larını oluştur
+  - [-] 12.2 SiteSettings ve Admin user seeder'larını oluştur
     - SiteSettingsSeeder: Türkçe placeholder içerikle varsayılan ayarlar
     - AdminSeeder: admin rolüne sahip bir admin kullanıcı (varsayılan şifre ile)
     - DatabaseSeeder'da tüm seeder'ları sırala

@@ -589,6 +589,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788938935
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790239087
       }
     ],
     "10.2 CategoryResource, TagResource ve TestimonialResource oluştur": [
@@ -601,6 +606,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788939873
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790240034
       }
     ],
     "10.3 FaqResource, PageResource ve TeamMemberResource oluştur": [
@@ -613,6 +623,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788941057
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790240998
       }
     ],
     "10.4 AppointmentResource ve ContactMessageResource oluştur": [
@@ -625,6 +640,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788942044
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790241944
       }
     ],
     "10.5 SiteSettings yönetim sayfasını oluştur": [
@@ -637,6 +657,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788943904
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790243642
       }
     ],
     "10.6 Dashboard widget'larını oluştur": [
@@ -644,6 +669,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391085
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790249663
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799063515
       }
     ],
     "10.7 Shield policy'lerini yapılandır": [
@@ -651,6 +686,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391120
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781790251226
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799065244
       }
     ],
     "11. Checkpoint - Admin Panel Doğrulaması": [
@@ -658,6 +703,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391156
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781796997082
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799039930
       }
     ],
     "12.1 İçerik seeder'larını oluştur": [
@@ -665,6 +720,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391195
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799164188
       }
     ],
     "12.2 SiteSettings ve Admin user seeder'larını oluştur": [
@@ -672,6 +732,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391235
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799165768
       }
     ],
     "13.1 Responsive uyumluluk düzenlemelerini yap": [
@@ -749,6 +814,13 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788932451
+      }
+    ],
+    "10. Filament Admin Resources": [
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781799065317
       }
     ]
   }
