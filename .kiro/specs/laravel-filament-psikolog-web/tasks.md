@@ -205,8 +205,8 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
   - E-posta gönderiminin çalıştığını doğrula
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 9. Public Frontend Blade View'ları
-  - [-] 9.1 Anasayfa view'ını oluştur (pages/home.blade.php)
+- [x] 9. Public Frontend Blade View'ları
+  - [x] 9.1 Anasayfa view'ını oluştur (pages/home.blade.php)
     - Hero section: SiteSettings hero_title, hero_subtitle, hero_cta_text
     - Aktif servisler carousel (Owl Carousel)
     - Son 3 yayınlanan blog yazısı kartları
@@ -215,33 +215,33 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
     - Harita ve iletişim bölümü (SiteSettings.map_embed)
     - _Requirements: 9.1_
 
-  - [-] 9.2 Hizmetler sayfaları view'larını oluştur
+  - [x] 9.2 Hizmetler sayfaları view'larını oluştur
     - `pages/services/index.blade.php`: Aktif servisler listesi (sıralı)
     - `pages/services/show.blade.php`: Servis detay sayfası (tam içerik, resim, fiyat, süre)
     - Blade component: `components/service-card.blade.php`
     - _Requirements: 9.3, 9.4_
 
-  - [-] 9.3 Blog sayfaları view'larını oluştur
+  - [x] 9.3 Blog sayfaları view'larını oluştur
     - `pages/blog/index.blade.php`: Blog listesi paginated, sağ sidebar (kategoriler, son yazılar)
     - `pages/blog/show.blade.php`: Yazı detay (kategori, etiketler, yayın tarihi, okuma süresi)
     - Blade component: `components/post-card.blade.php`
     - _Requirements: 9.5, 9.6_
 
-  - [-] 9.4 Form sayfalarının view'larını oluştur
+  - [x] 9.4 Form sayfalarının view'larını oluştur
     - `pages/appointment.blade.php`: Randevu formu (name, email, phone, service select, datetime-local, notes, KVKK checkbox)
     - `pages/contact.blade.php`: İletişim formu (name, email, phone, subject, message, KVKK checkbox) + harita embed
     - Validation hata mesajları gösterimi, old() ile değer korunması
     - Mobil uyumlu input type'ları (tel, email, datetime-local)
     - _Requirements: 10.1, 11.1, 14.4_
 
-  - [-] 9.5 SSS, Hakkımda ve diğer sayfa view'larını oluştur
+  - [x] 9.5 SSS, Hakkımda ve diğer sayfa view'larını oluştur
     - `pages/faq.blade.php`: Aktif FAQ'lar kategoriye göre gruplu accordion
     - `pages/about.blade.php`: Uzman biyografisi içeriği
     - `pages/page.blade.php`: Dinamik sayfa (KVKK, Gizlilik vb.)
     - Blade component: `components/faq-item.blade.php`
     - _Requirements: 9.2, 9.7_
 
-  - [-] 9.6 404 hata sayfasını oluştur
+  - [x] 9.6 404 hata sayfasını oluştur
     - `resources/views/errors/404.blade.php`: Template tasarımıyla uyumlu özel 404 sayfası
     - Master layout kullanarak tutarlı header/footer
     - _Requirements: 9.10_
@@ -255,30 +255,30 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
     - **Validates: Requirements 12.1**
 
 - [ ] 10. Filament Admin Resources
-  - [~] 10.1 ServiceResource ve PostResource oluştur
+  - [-] 10.1 ServiceResource ve PostResource oluştur
     - ServiceResource: title, slug, short_description, description(RichEditor), icon, image(FileUpload), price, duration, order, is_active, SEO fields; reorderable table
     - PostResource: title, slug, category select, tags multi-select, excerpt, body(RichEditor), cover_image(FileUpload), status select, published_at datetime picker, SEO fields; status badge table, publish toggle
     - _Requirements: 6.1, 6.2_
 
-  - [~] 10.2 CategoryResource, TagResource ve TestimonialResource oluştur
+  - [-] 10.2 CategoryResource, TagResource ve TestimonialResource oluştur
     - CategoryResource: name, slug; table posts_count
     - TagResource: name, slug; table posts_count
     - TestimonialResource: author_name, content, rating, is_approved, order; approve toggle, reorderable table
     - _Requirements: 6.3, 6.4_
 
-  - [~] 10.3 FaqResource, PageResource ve TeamMemberResource oluştur
+  - [-] 10.3 FaqResource, PageResource ve TeamMemberResource oluştur
     - FaqResource: question, answer(RichEditor), category, order, is_active; reorderable table, is_active toggle
     - PageResource: title, slug, body(RichEditor), SEO fields; table title/slug
     - TeamMemberResource: name, title, bio, photo(FileUpload), socials(repeater), order, is_active; reorderable table
     - _Requirements: 6.5, 6.8, 6.9_
 
-  - [~] 10.4 AppointmentResource ve ContactMessageResource oluştur
+  - [-] 10.4 AppointmentResource ve ContactMessageResource oluştur
     - AppointmentResource: name, email, phone, service select, preferred_at, status select, notes; table status badge, approve/cancel actions tetikleme email gönderimi
     - ContactMessageResource: Read-only, table (name, subject, is_read badge, created_at), mark-as-read action
     - Status değişikliğinde (confirmed/cancelled) ilgili Mailable gönderimi
     - _Requirements: 6.6, 6.7, 11.4, 11.5_
 
-  - [~] 10.5 SiteSettings yönetim sayfasını oluştur
+  - [-] 10.5 SiteSettings yönetim sayfasını oluştur
     - `app/Filament/Pages/ManageSiteSettings.php` Filament page
     - Tüm SiteSettings property'leri için uygun form field'ları: TextInput, FileUpload (logo/favicon), Textarea, Repeater (working_hours, social_links), RichEditor
     - Kaydetme işlemi sonrası site ayarları güncellenmeli

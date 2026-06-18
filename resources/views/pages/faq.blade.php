@@ -2,6 +2,11 @@
 
 @section('title', 'Sıkça Sorulan Sorular')
 
+@php
+    $seoTitle = 'Sıkça Sorulan Sorular';
+    $seoDescription = 'Psikolojik danışmanlık hakkında sıkça sorulan sorular ve cevapları.';
+@endphp
+
 @section('content')
     <!-- Page Title -->
     <div class="page-title-wrapp">
@@ -51,14 +56,12 @@
                     <div class="col-lg-12">
                         <div class="accordion-01 acc-theme-03">
                             @foreach($categoryFaqs as $index => $faq)
-                                <h4 data-count="{{ $index + 1 }}" class="accordion-01__title {{ $loop->first && $loop->parent->first ? 'expanded_yes' : 'expanded_no' }}">
-                                    {{ $faq->question }}
-                                </h4>
-                                <div class="accordion-01__body">
-                                    <div class="accordion-01__text">
-                                        {!! $faq->answer !!}
-                                    </div>
-                                </div>
+                                <x-faq-item
+                                    :question="$faq->question"
+                                    :answer="$faq->answer"
+                                    :index="$index"
+                                    :expanded="$loop->first && $loop->parent->first"
+                                />
                             @endforeach
                         </div>
                     </div>

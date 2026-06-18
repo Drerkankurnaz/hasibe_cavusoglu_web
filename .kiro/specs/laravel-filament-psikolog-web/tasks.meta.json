@@ -487,6 +487,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788441268
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788926368
       }
     ],
     "9.2 Hizmetler sayfaları view'larını oluştur": [
@@ -499,6 +504,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788442260
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788927491
       }
     ],
     "9.3 Blog sayfaları view'larını oluştur": [
@@ -511,6 +521,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788443183
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788928212
       }
     ],
     "9.4 Form sayfalarının view'larını oluştur": [
@@ -523,6 +538,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788444349
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788929325
       }
     ],
     "9.5 SSS, Hakkımda ve diğer sayfa view'larını oluştur": [
@@ -535,6 +555,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788446335
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788930551
       }
     ],
     "9.6 404 hata sayfasını oluştur": [
@@ -547,6 +572,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788451888
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788932322
       }
     ],
     "10.1 ServiceResource ve PostResource oluştur": [
@@ -554,6 +584,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390876
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788938935
       }
     ],
     "10.2 CategoryResource, TagResource ve TestimonialResource oluştur": [
@@ -561,6 +596,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390937
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788939873
       }
     ],
     "10.3 FaqResource, PageResource ve TeamMemberResource oluştur": [
@@ -568,6 +608,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782390972
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788941057
       }
     ],
     "10.4 AppointmentResource ve ContactMessageResource oluştur": [
@@ -575,6 +620,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391009
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788942044
       }
     ],
     "10.5 SiteSettings yönetim sayfasını oluştur": [
@@ -582,6 +632,11 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391047
+      },
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788943904
       }
     ],
     "10.6 Dashboard widget'larını oluştur": [
@@ -687,6 +742,13 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781788090142
+      }
+    ],
+    "9. Public Frontend Blade View'ları": [
+      {
+        "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781788932451
       }
     ]
   }

@@ -2,8 +2,18 @@
 
 namespace App\Enums;
 
-enum PostStatus: string
+use Filament\Support\Contracts\HasLabel;
+
+enum PostStatus: string implements HasLabel
 {
     case Draft = 'draft';
     case Published = 'published';
+
+    public function getLabel(): ?string
+    {
+        return match ($this) {
+            self::Draft => 'Taslak',
+            self::Published => 'Yayında',
+        };
+    }
 }
