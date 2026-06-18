@@ -1,6 +1,7 @@
-{{-- Schema.org Yapılandırılmış Veri: MedicalBusiness ve Person JSON-LD --}}
+{{-- Schema.org Yapılandırılmış Veri: MedicalBusiness, Person ve Article JSON-LD --}}
 @props([
-    'type' => 'both', // 'business', 'person', 'both'
+    'type' => 'both', // 'business', 'person', 'both', 'article'
+    'post' => null, // Blog yazısı için Article schema
 ])
 
 @php
@@ -23,6 +24,7 @@
         "@type": "PostalAddress",
         "streetAddress": "{{ $settings->address ?? '' }}",
         "addressLocality": "Istanbul",
+        "addressRegion": "Istanbul",
         "addressCountry": "TR"
     },
     @if(!empty($settings->social_links))
@@ -48,6 +50,13 @@
     @endif
     "medicalSpecialty": "Psychiatric",
     "priceRange": "$$",
+    "areaServed": {
+        "@type": "City",
+        "name": "Istanbul"
+    },
+    @if($settings->map_embed)
+    "hasMap": "{{ url('/iletisim') }}",
+    @endif
     "inLanguage": "tr"
 }
 </script>
@@ -73,6 +82,7 @@
         "@type": "PostalAddress",
         "streetAddress": "{{ $settings->address ?? '' }}",
         "addressLocality": "Istanbul",
+        "addressRegion": "Istanbul",
         "addressCountry": "TR"
     },
     @if(!empty($settings->social_links))
@@ -88,8 +98,45 @@
         "Bireysel Terapi",
         "Çift Terapisi",
         "Aile Terapisi",
-        "Bilişsel Davranışçı Terapi"
+        "Bilişsel Davranışçı Terapi",
+        "EMDR",
+        "Şema Terapi"
     ],
+    "inLanguage": "tr"
+}
+</script>
+@endif
+
+@if($type === 'article' && $post)
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ $post->title }}",
+    "description": "{{ $post->excerpt ?? '' }}",
+    "url": "{{ url('/blog/' . $post->slug) }}",
+    @if($post->cover_image)
+    "image": "{{ asset('storage/' . $post->cover_image) }}",
+    @endif
+    "datePublished": "{{ $post->published_at ? $post->published_at->toIso8601String() : '' }}",
+    "dateModified": "{{ $post->updated_at->toIso8601String() }}",
+    "author": {
+        "@type": "Person",
+        "name": "Hasibe Çavuşoğlu",
+        "url": "{{ url('/hakkimda') }}"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "{{ config('app.name', 'Psikolog Hasibe Çavuşoğlu') }}",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ $settings->logo ? asset('storage/' . $settings->logo) : asset('img/logo.png') }}"
+        }
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ url('/blog/' . $post->slug) }}"
+    },
     "inLanguage": "tr"
 }
 </script>

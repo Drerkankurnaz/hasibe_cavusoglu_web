@@ -1,0 +1,178 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Docker dizin yapısını oluştur": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451388
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805464933
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805928387
+      }
+    ],
+    "1.2 .dockerignore dosyasını oluştur": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451451
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805466285
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805929805
+      }
+    ],
+    "2.1 PHP-FPM Dockerfile dosyasını oluştur (`docker/php/Dockerfile`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451484
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805936618
+      }
+    ],
+    "2.2 PHP yapılandırma dosyasını oluştur (`docker/php/php.ini`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451514
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805937709
+      }
+    ],
+    "2.3 PHP-FPM pool yapılandırmasını oluştur (`docker/php/www.conf`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451552
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805938549
+      }
+    ],
+    "3.1 Nginx ana yapılandırma dosyasını oluştur (`docker/nginx/nginx.conf`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451580
+      }
+    ],
+    "3.2 Varsayılan site yapılandırmasını oluştur (`docker/nginx/conf.d/default.conf`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451614
+      }
+    ],
+    "3.3 SSL yapılandırma dosyasını oluştur (`docker/nginx/conf.d/ssl.conf`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451645
+      }
+    ],
+    "4.1 MySQL yapılandırma dosyasını oluştur (`docker/mysql/my.cnf`)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451678
+      },
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805939531
+      }
+    ],
+    "5. Checkpoint - Tüm yapılandırma dosyalarını kontrol et": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451709
+      }
+    ],
+    "6.1 docker-compose.yml dosyasını oluştur (geliştirme ortamı)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451744
+      }
+    ],
+    "6.2 docker-compose.prod.yml dosyasını oluştur (üretim override)": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451776
+      }
+    ],
+    "7.1 .env.docker örnek dosyasını oluştur": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451819
+      }
+    ],
+    "7.2 Makefile dosyasını oluştur": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451855
+      }
+    ],
+    "8. Checkpoint - Docker yapısını doğrula": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451893
+      }
+    ],
+    "9.1 Smoke test komutlarını doğrula": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451923
+      }
+    ],
+    "9.2 Entegrasyon test doğrulaması": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451955
+      }
+    ],
+    "10. Son checkpoint - Tüm dosyaları ve yapılandırmaları doğrula": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805451988
+      }
+    ],
+    "1. Docker dizin yapısını oluştur ve temel yapılandırma dosyalarını hazırla": [
+      {
+        "executionId": "545bb97f-8c72-4161-ac26-bbadda22ffb6",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781805929841
+      }
+    ]
+  }
+}

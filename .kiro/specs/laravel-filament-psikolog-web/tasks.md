@@ -304,41 +304,41 @@ Bu plan, Optima psikoloji HTML şablonunun Laravel 11 + Filament v3 uygulamasın
   - Rol bazlı erişim kontrolünü doğrula
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 12. Seeder'lar ve Örnek Veriler
-  - [-] 12.1 İçerik seeder'larını oluştur
+- [x] 12. Seeder'lar ve Örnek Veriler
+  - [x] 12.1 İçerik seeder'larını oluştur
     - ServiceSeeder: En az 6 psikoloji hizmeti (Bireysel Terapi, Çift Terapisi, Aile Terapisi vb.)
     - PostSeeder: En az 3 blog yazısı ilişkili kategori ve tag'larla
     - FaqSeeder: En az 5 SSS kaydı
     - TestimonialSeeder: En az 3 testimonial kaydı
     - _Requirements: 13.1, 13.2, 13.3_
 
-  - [-] 12.2 SiteSettings ve Admin user seeder'larını oluştur
+  - [x] 12.2 SiteSettings ve Admin user seeder'larını oluştur
     - SiteSettingsSeeder: Türkçe placeholder içerikle varsayılan ayarlar
     - AdminSeeder: admin rolüne sahip bir admin kullanıcı (varsayılan şifre ile)
     - DatabaseSeeder'da tüm seeder'ları sırala
     - _Requirements: 13.4, 13.5_
 
-- [ ] 13. Responsive Tasarım ve Son Dokunuşlar
-  - [~] 13.1 Responsive uyumluluk düzenlemelerini yap
+- [x] 13. Responsive Tasarım ve Son Dokunuşlar
+  - [x] 13.1 Responsive uyumluluk düzenlemelerini yap
     - Template'in mevcut responsive CSS breakpoint'lerini koru
     - Mobil navigasyon (hamburger menü) çalışmasını doğrula
     - Veri tablolarını mobil görünümde card layout formatına dönüştür
     - Formların mobil cihazlarda tam kullanılabilir olmasını sağla
     - _Requirements: 14.1, 14.2, 14.3, 14.4_
 
-  - [~] 13.2 Sitemap ve SEO son ayarlarını tamamla
+  - [x] 13.2 Sitemap ve SEO son ayarlarını tamamla
     - sitemap.xml oluşturma: tüm public route'lar ve yayınlanan içerik URL'leri
     - Schema.org yapılandırılmış veri: anasayfa ve hakkımda sayfasında MedicalBusiness/Person
     - Semantic HTML heading hiyerarşisi kontrolü (h1-h6)
     - _Requirements: 12.3, 12.4, 12.5_
 
-  - [~] 13.3 Türkçe dil dosyalarını oluştur
+  - [x] 13.3 Türkçe dil dosyalarını oluştur
     - `resources/lang/tr/validation.php`: Türkçe validation mesajları
     - `resources/lang/tr/messages.php`: Uygulama genelinde Türkçe mesajlar (success, error vb.)
     - Custom validation mesajları (KVKK, randevu tarihi vb.)
     - _Requirements: İlgili tüm form ve validation gereksinimleri_
 
-- [~] 14. Final Checkpoint - Tüm Sistem Entegrasyonu
+- [x] 14. Final Checkpoint - Tüm Sistem Entegrasyonu
   - Tüm public sayfa route'larının çalıştığını doğrula
   - Form submission ve e-posta gönderimini doğrula
   - Admin panel CRUD işlemlerini doğrula

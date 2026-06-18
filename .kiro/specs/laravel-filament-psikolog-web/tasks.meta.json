@@ -725,6 +725,11 @@
         "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781799164188
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781800323311
       }
     ],
     "12.2 SiteSettings ve Admin user seeder'larını oluştur": [
@@ -744,6 +749,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391271
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781800473384
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801002410
       }
     ],
     "13.2 Sitemap ve SEO son ayarlarını tamamla": [
@@ -751,6 +766,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391306
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781800474695
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801003619
       }
     ],
     "13.3 Türkçe dil dosyalarını oluştur": [
@@ -758,6 +783,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391340
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781800476320
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801005210
       }
     ],
     "14. Final Checkpoint - Tüm Sistem Entegrasyonu": [
@@ -765,6 +800,16 @@
         "executionId": "58c8cbbd-0e1d-4488-85a2-8b60eb341cf9",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781782391379
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801012558
+      },
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801220995
       }
     ],
     "1. Proje Altyapısı ve Yapılandırma": [
@@ -821,6 +866,20 @@
         "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
         "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
         "timestamp": 1781799065317
+      }
+    ],
+    "13. Responsive Tasarım ve Son Dokunuşlar": [
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801005293
+      }
+    ],
+    "12. Seeder'lar ve Örnek Veriler": [
+      {
+        "executionId": "8d46abde-b12a-4a91-91a2-5f4490668c15",
+        "chatSessionId": "sess_2e4142c2-8295-4d1b-bf75-0f48be964bb9",
+        "timestamp": 1781801249983
       }
     ]
   }

@@ -15,9 +15,9 @@
             <div class="row">
                 <div class="col-lg-12 text-left">
                     <p class="subtitle-07">{{ $settings->hero_subtitle }}</p>
-                    <h2 class="title-06">
+                    <h1 class="title-06">
                         {!! nl2br(e($settings->hero_title)) !!}
-                    </h2>
+                    </h1>
                     <a class="btn-04" href="{{ route('about') }}">Hakkımda</a>
                     <a class="btn-05" href="{{ route('appointment.create') }}">{{ $settings->hero_cta_text ?: 'Randevu Al' }}</a>
                 </div>
@@ -39,9 +39,9 @@
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="about-us-content-01">
                         <p class="subtitle-01">Hakkımda</p>
-                        <h3 class="title-02">Profesyonel
+                        <h2 class="title-02">Profesyonel
                             <span>Psikolojik Destek</span>
-                        </h3>
+                        </h2>
                         <div class="about-us-text-01 mar-bt-27">
                             <p>Uzman klinik psikolog olarak bireylere, çiftlere ve ailelere profesyonel psikolojik destek sunmaktayım. Bilişsel davranışçı terapi, şema terapi ve EMDR gibi kanıta dayalı yöntemlerle danışanlarıma yardımcı olmaktayım.</p>
                         </div>
@@ -59,9 +59,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p class="subtitle-01 text-center">Neler Sunuyoruz</p>
-                    <h3 class="title-03 text-center mar-bt-50">Terapi
+                    <h2 class="title-03 text-center mar-bt-50">Terapi
                         <span>&amp; Hizmetler</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -103,9 +103,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <p class="testimonials__subtitle">Referanslar</p>
-                    <h3 class="testimonials__title">Danışanlarımız
+                    <h2 class="testimonials__title">Danışanlarımız
                         <span>Ne Diyor</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -145,9 +145,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h6 class="subtitle-01 text-center">Blog</h6>
-                    <h3 class="title-03 title-03--mr-01 text-center">Son
+                    <h2 class="title-03 title-03--mr-01 text-center">Son
                         <span>Yazılar</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -193,9 +193,9 @@
         <div class="faq-content-02">
             <div class="faq-content-02__wrapp">
                 <h6 class="subtitle-03">İletişim</h6>
-                <h3 class="title-04">Bizi
+                <h2 class="title-04">Bizi
                     <span>Haritada Bulun</span>
-                </h3>
+                </h2>
                 <div class="faq-content-02__text">
                     <p>Profesyonel psikolojik danışmanlık hizmetlerimiz hakkında bilgi almak veya randevu oluşturmak için bizimle iletişime geçebilirsiniz.</p>
                 </div>

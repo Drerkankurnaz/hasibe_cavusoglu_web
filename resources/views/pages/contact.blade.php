@@ -8,7 +8,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="page-title-01">İletişim</h2>
+                    <h1 class="page-title-01">İletişim</h1>
                 </div>
             </div>
             <div class="row">

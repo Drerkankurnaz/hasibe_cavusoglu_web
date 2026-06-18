@@ -45,6 +45,9 @@
     {{-- Main style --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
+    {{-- Responsive Custom --}}
+    <link rel="stylesheet" href="{{ asset('css/responsive-custom.css') }}">
+
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
 

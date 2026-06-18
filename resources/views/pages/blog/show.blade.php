@@ -2,13 +2,17 @@
 
 @section('title', $post->seo_title ?: $post->title)
 
+@section('schema-org')
+    <x-schema-org type="article" :post="$post" />
+@endsection
+
 @section('content')
     <!-- Page Title -->
     <div class="page-title-wrapp">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="page-title-01">Blog Yazısı</h2>
+                    <h1 class="page-title-01">Blog Yazısı</h1>
                 </div>
             </div>
             <div class="row">

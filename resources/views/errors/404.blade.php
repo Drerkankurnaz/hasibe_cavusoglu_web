@@ -14,7 +14,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="page-404-wrapp">
-                        <h2 class="page-404-title">404</h2>
+                        <h1 class="page-404-title">404</h1>
                         <p class="page-404-subtitle">Sayfa Bulunamadı!</p>
                         <p class="page-404-text">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.</p>
                         <a href="{{ route('home') }}" class="page-404-btn">Anasayfaya Dön</a>

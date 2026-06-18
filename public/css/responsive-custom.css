@@ -1,0 +1,483 @@
+/**
+ * Responsive Custom CSS
+ * Psikolog Hasibe Cavusoglu Web
+ * Bootstrap 3.3.7 uyumlu responsive iyilestirmeler
+ * Bu dosya: Tabloları mobilde card layout'a dönüştürür,
+ * formların mobilde kullanılabilirliğini artırır,
+ * ve genel responsive düzenlemeleri yapar.
+ */
+
+/* ============================================
+   Genel Mobil İyileştirmeler
+   ============================================ */
+
+/* Görsellerin taşmasını engelle */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gömülü içeriklerin responsive olması */
+iframe,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+/* ============================================
+   Responsive Tablo → Card Layout (< 768px)
+   ============================================ */
+
+@media only screen and (max-width: 767px) {
+
+    /* Tablo yapısını kart düzenine dönüştür */
+    .table-responsive-card thead {
+        display: none;
+    }
+
+    .table-responsive-card tbody,
+    .table-responsive-card tr,
+    .table-responsive-card td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-responsive-card tr {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .table-responsive-card td {
+        border: none;
+        padding: 8px 0;
+        text-align: left;
+        position: relative;
+        padding-left: 40%;
+        min-height: 30px;
+    }
+
+    .table-responsive-card td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 38%;
+        font-weight: 600;
+        color: #555;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .table-responsive-card td:last-child {
+        border-bottom: none;
+    }
+
+    /* Genel tablo responsive fallback */
+    .table-responsive {
+        border: none;
+    }
+
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+
+    .table-responsive > .table > thead {
+        display: none;
+    }
+
+    .table-responsive > .table > tbody > tr {
+        display: block;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .table-responsive > .table > tbody > tr > td {
+        display: block;
+        border: none;
+        padding: 6px 0;
+        text-align: left;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    .table-responsive > .table > tbody > tr > td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 38%;
+        font-weight: 600;
+        color: #555;
+        font-size: 13px;
+    }
+}
+
+/* ============================================
+   Form Mobil Uyumluluğu (< 768px)
+   ============================================ */
+
+@media only screen and (max-width: 767px) {
+
+    /* Form elemanları tam genişlik */
+    .form-control {
+        width: 100% !important;
+        font-size: 16px !important; /* iOS zoom'u engeller */
+        -webkit-appearance: none;
+        border-radius: 4px;
+    }
+
+    /* Select elemanları */
+    select.form-control {
+        font-size: 16px !important;
+        height: 48px !important;
+        padding: 8px 12px;
+    }
+
+    /* Input elemanları yeterli yükseklik */
+    input.form-control {
+        height: 48px !important;
+        padding: 8px 12px;
+    }
+
+    /* Textarea */
+    textarea.form-control {
+        min-height: 120px;
+        padding: 12px;
+    }
+
+    /* Label'lar daha okunabilir */
+    label {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    /* Form grupları arası yeterli boşluk */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Butonlar tam genişlik */
+    .btn-01,
+    .btn-02,
+    .form-group .btn,
+    .reply-form__form .btn-01 {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+
+    /* Checkbox ve radio daha kolay tıklanabilir */
+    .checkbox label,
+    .radio label {
+        padding-left: 25px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .checkbox input[type="checkbox"],
+    .radio input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+    }
+
+    /* Alert mesajları responsive */
+    .alert {
+        padding: 12px 15px;
+        font-size: 13px;
+    }
+
+    /* Form validation hata mesajları */
+    .help-block {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+}
+
+/* ============================================
+   Navigasyon / Header Mobil İyileştirmeler
+   ============================================ */
+
+@media only screen and (max-width: 767px) {
+
+    /* Header bilgi barı mobil */
+    .info-block-01 {
+        padding: 8px 0;
+    }
+
+    .info-block-01 .address-info,
+    .info-block-01 .email-info {
+        display: block;
+        margin: 3px 0;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .info-block-01 .social-links-top {
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    /* Logo alanı mobil */
+    .header-box-01 .logo img {
+        max-height: 50px;
+        width: auto;
+    }
+
+    /* Telefon bilgisi mobil */
+    .phone-info {
+        font-size: 18px !important;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Randevu butonu mobil */
+    .btn-app {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    /* Hamburger menü görünürlüğü (zaten style.css'de var, burada güçlendiriyoruz) */
+    .main-nav__btn {
+        display: inline-block !important;
+    }
+
+    /* Menü açıldığında padding */
+    .main-nav__list.open {
+        padding: 15px 0;
+    }
+
+    /* Menü öğeleri daha kolay tıklanabilir */
+    .main-nav__list li a {
+        padding: 10px 15px;
+        font-size: 15px;
+        display: block;
+    }
+}
+
+/* ============================================
+   Genel İçerik Responsive (< 768px)
+   ============================================ */
+
+@media only screen and (max-width: 767px) {
+
+    /* Container padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Sayfa başlık alanı */
+    .page-title-wrapp {
+        padding: 25px 0;
+    }
+
+    .page-title-01 {
+        font-size: 24px;
+    }
+
+    /* İçerik kutuları */
+    .content-box-01 {
+        padding: 30px 0;
+    }
+
+    /* Blog kartları mobil */
+    .post-card,
+    .blog-listing-item {
+        margin-bottom: 25px;
+    }
+
+    /* Hizmet kartları mobil */
+    .service-card,
+    .service-box-01 {
+        margin-bottom: 25px;
+    }
+
+    /* Sidebar mobilde altta */
+    .sidebar {
+        margin-top: 40px;
+    }
+
+    /* Testimonial slider */
+    .testimonial-slider .owl-item {
+        padding: 0 5px;
+    }
+
+    /* SSS accordion */
+    .acc--01 .acc__card .acc__title {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    /* Footer mobil */
+    .footer-widgets .col-md-3,
+    .footer-widgets .col-md-4,
+    .footer-widgets .col-lg-3,
+    .footer-widgets .col-lg-4 {
+        margin-bottom: 30px;
+    }
+
+    /* Harita responsive */
+    .contacts_map,
+    .contacts_map iframe {
+        height: 250px !important;
+    }
+
+    /* Breadcrumb mobil */
+    .breadcrumbs {
+        font-size: 12px;
+    }
+
+    .breadcrumbs li {
+        padding: 0 8px;
+    }
+}
+
+/* ============================================
+   Tablet İyileştirmeler (768px - 991px)
+   ============================================ */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    /* Form elemanları tablet */
+    .form-control {
+        font-size: 15px;
+    }
+
+    /* Tablo stil düzenleme - yarı card */
+    .table-responsive-card tr {
+        display: table-row;
+    }
+
+    .table-responsive-card td {
+        padding-left: 10px;
+    }
+
+    /* İçerik alanları */
+    .content-box-01 {
+        padding: 40px 0;
+    }
+
+    /* Blog sidebar */
+    .sidebar {
+        margin-top: 30px;
+    }
+}
+
+/* ============================================
+   Küçük Mobil (< 480px)
+   ============================================ */
+
+@media only screen and (max-width: 480px) {
+
+    /* Çok küçük ekranlar için ek düzenlemeler */
+    .page-title-01 {
+        font-size: 20px;
+    }
+
+    .title-02 {
+        font-size: 22px;
+    }
+
+    .subtitle-04 {
+        font-size: 13px;
+    }
+
+    /* Randevu formu padding azalt */
+    .appointment-form-wrapp {
+        padding: 15px 10px;
+    }
+
+    /* İletişim bilgileri blok */
+    .contacts-info-block p,
+    .contacts-info-block a {
+        font-size: 13px;
+    }
+
+    /* Card layout tablo hücreleri tam genişlik */
+    .table-responsive-card td {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .table-responsive-card td::before {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-bottom: 3px;
+    }
+
+    /* Owl Carousel itemleri */
+    .owl-carousel .owl-item {
+        padding: 0 5px;
+    }
+
+    /* Logo daha küçük */
+    .header-box-01 .logo img {
+        max-height: 40px;
+    }
+}
+
+/* ============================================
+   Touch / Mobil Etkileşim İyileştirmeleri
+   ============================================ */
+
+/* Tıklanabilir alanlar minimum 44px */
+@media (pointer: coarse) {
+    .main-nav__list li a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-01,
+    .btn-02,
+    .btn-app {
+        min-height: 44px;
+    }
+
+    .checkbox label,
+    .radio label {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* ============================================
+   Print Media (Yazdırma)
+   ============================================ */
+
+@media print {
+    .main-nav,
+    .info-block-01,
+    .footer,
+    .back-to-top {
+        display: none !important;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+}
