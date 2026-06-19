@@ -700,31 +700,6 @@ video {
 }
 
 /* ============================================
-   Anasayfa "Hakkımda" küçük portre
-   Abartısız, sade bir yazar dokunuşu: başlığın
-   üstünde küçük, yuvarlak, yumuşak gölgeli portre.
-   ============================================ */
-
-.about-us-content-01 .home-about-portrait {
-    display: block;
-    width: 84px;
-    height: 84px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 50%;
-    margin-bottom: 18px;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 14px rgba(20, 40, 55, 0.12);
-}
-
-@media (max-width: 767px) {
-    .about-us-content-01 .home-about-portrait {
-        width: 72px;
-        height: 72px;
-    }
-}
-
-/* ============================================
    Hero (üst banner) portresi
    Büyük, yuvarlak portre. Masaüstünde metnin sağında
    dikey ortalı (akışı bozmadan, absolute); mobilde
