@@ -83,17 +83,6 @@
                                 <span class="about-me-p-02">{{ $settings->whatsapp }}</span>
                             @endif
                         </p>
-                        <div class="about-me-author">
-                            <div class="about-me-author__img">
-                                <img src="{{ asset('img/about_me/about_me_img.jpg') }}" alt="Hasibe Çavuşoğlu">
-                            </div>
-                            <div class="about-me-author__text">
-                                <p>
-                                    <strong>Hasibe Çavuşoğlu</strong>,
-                                    <span>Uzman Klinik Psikolog</span>
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 text-md-center">
@@ -217,11 +206,6 @@
                                     </figure>
                                     <h5 class="icon-boxes-02__title">İçten Destek</h5>
                                     <p class="icon-boxes-02__text">Zorlandığınız her konuda, yargılamadan ve içtenlikle yanınızda olmaya özen gösteriyorum.</p>
-                                </div>
-                            </div>
-                            <div class="icon-boxes-in">
-                                <div class="img-wrapp-01 home-values-img">
-                                    <img src="{{ asset('img/about_me/about_me_img.jpg') }}" alt="Uzman Psikolog Hasibe Çavuşoğlu">
                                 </div>
                             </div>
                             <div class="icon-boxes-in">

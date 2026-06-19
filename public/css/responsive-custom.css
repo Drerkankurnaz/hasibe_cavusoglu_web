@@ -712,17 +712,6 @@ video {
     box-shadow: 0 14px 40px rgba(20, 40, 55, 0.18);
 }
 
-/* Değerler bölümü merkez görseli — taşmayı engelle, ortala */
-.home-values-img {
-    text-align: center;
-}
-
-.home-values-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
 /* ============================================
    Print Media (Yazdırma)
    ============================================ */
