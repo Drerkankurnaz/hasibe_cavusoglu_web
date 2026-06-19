@@ -38,6 +38,7 @@
                 </div>
                 <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="about-us-content-01">
+                        <img src="{{ asset('img/about_me/about_me_img.jpg') }}" alt="Psikolog Hasibe Çavuşoğlu" class="home-about-portrait">
                         <p class="subtitle-01">Hakkımda</p>
                         <h2 class="title-02">Profesyonel
                             <span>Psikolojik Destek</span>
