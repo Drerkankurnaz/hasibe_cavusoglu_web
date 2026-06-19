@@ -84,15 +84,15 @@ video {
         border: none;
     }
 
-    .table-responsive > .table {
+    .table-responsive>.table {
         margin-bottom: 0;
     }
 
-    .table-responsive > .table > thead {
+    .table-responsive>.table>thead {
         display: none;
     }
 
-    .table-responsive > .table > tbody > tr {
+    .table-responsive>.table>tbody>tr {
         display: block;
         background: #fff;
         border: 1px solid #e0e0e0;
@@ -102,7 +102,7 @@ video {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
     }
 
-    .table-responsive > .table > tbody > tr > td {
+    .table-responsive>.table>tbody>tr>td {
         display: block;
         border: none;
         padding: 6px 0;
@@ -111,7 +111,7 @@ video {
         padding-left: 40%;
     }
 
-    .table-responsive > .table > tbody > tr > td::before {
+    .table-responsive>.table>tbody>tr>td::before {
         content: attr(data-label);
         position: absolute;
         left: 0;
@@ -132,7 +132,8 @@ video {
     /* Form elemanları tam genişlik */
     .form-control {
         width: 100% !important;
-        font-size: 16px !important; /* iOS zoom'u engeller */
+        font-size: 16px !important;
+        /* iOS zoom'u engeller */
         -webkit-appearance: none;
         border-radius: 4px;
     }
@@ -212,12 +213,20 @@ video {
 
 @media only screen and (max-width: 767px) {
 
-    /* Header bilgi barı mobil */
+    /* Header bilgi barı mobil — sadece özet göster */
     .info-block-01 {
-        padding: 8px 0;
+        padding: 6px 0;
     }
 
-    .info-block-01 .address-info,
+    /* Çalışma saatleri mobilde gizle (çok yer kaplıyor) */
+    .info-block-01 .visit-time {
+        display: none;
+    }
+
+    .info-block-01 .address-info {
+        display: none;
+    }
+
     .info-block-01 .email-info {
         display: block;
         margin: 3px 0;
@@ -231,26 +240,37 @@ video {
         margin-top: 5px;
     }
 
+    .info-block-01__box-01 {
+        text-align: center;
+    }
+
     /* Logo alanı mobil */
+    .header-box-01 {
+        padding: 12px 0 14px !important;
+    }
+
     .header-box-01 .logo img {
-        max-height: 50px;
+        max-height: 45px;
         width: auto;
     }
 
     /* Telefon bilgisi mobil */
     .phone-info {
-        font-size: 18px !important;
+        font-size: 16px !important;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        margin-top: 5px;
     }
 
-    /* Randevu butonu mobil */
+    /* Randevu butonu mobil — tam genişlik */
     .btn-app {
         display: block;
         text-align: center;
-        margin: 10px 0;
+        margin: 8px auto;
         padding: 12px 15px;
         font-size: 14px;
+        width: 100%;
+        max-width: 280px;
     }
 
     /* Hamburger menü görünürlüğü (zaten style.css'de var, burada güçlendiriyoruz) */
@@ -283,6 +303,84 @@ video {
         padding-right: 15px;
     }
 
+    /* Hero section — padding azalt */
+    .img-box-02 {
+        padding-top: 60px !important;
+        padding-bottom: 50px !important;
+        min-height: auto !important;
+    }
+
+    .img-box-02 .title-06 {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .img-box-02 .subtitle-07 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .img-box-02 .btn-04,
+    .img-box-02 .btn-05 {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
+        margin: 8px 0;
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+
+    /* Hakkımda section — video arka plan sütununu gizle */
+    .home-bg-wrapp {
+        display: none;
+    }
+
+    /* Hakkımda — 1 kolon layout */
+    .content-box-01.pad-top-95 {
+        padding-top: 40px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .about-us-content-01 .subtitle-01 {
+        text-align: center;
+    }
+
+    .about-us-content-01 .title-02 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .about-us-content-01 .about-us-text-01 {
+        text-align: center;
+    }
+
+    .about-us-content-01 .btn-04 {
+        display: block;
+        text-align: center;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    /* Hizmetler section */
+    .content-box-02 {
+        padding-top: 40px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .content-box-02 .title-03 {
+        font-size: 22px;
+    }
+
+    /* Testimonials / Parallax */
+    .parallax-02 {
+        padding: 40px 0 !important;
+    }
+
+    .testimonials__title {
+        font-size: 22px;
+    }
+
     /* Sayfa başlık alanı */
     .page-title-wrapp {
         padding: 25px 0;
@@ -301,6 +399,25 @@ video {
     .post-card,
     .blog-listing-item {
         margin-bottom: 25px;
+    }
+
+    .featured-post-01 {
+        margin-bottom: 30px;
+    }
+
+    /* Blog son yazılar bölümü */
+    .content-box-01.pad-top-78 {
+        padding-top: 40px !important;
+        padding-bottom: 50px !important;
+    }
+
+    .content-box-01.pad-top-78 .title-03 {
+        font-size: 22px;
+    }
+
+    /* Blog kart genişliği mobilde tam */
+    .content-box-01 .col-sm-4 {
+        margin-bottom: 20px;
     }
 
     /* Hizmet kartları mobil */
@@ -333,10 +450,32 @@ video {
         margin-bottom: 30px;
     }
 
+    /* Harita + İletişim bölümü (content-box-03) */
+    .content-box-03 {
+        display: block !important;
+    }
+
+    .faq-content-02 {
+        float: none !important;
+        width: 100% !important;
+        padding: 30px 15px !important;
+    }
+
+    .faq-content-02__wrapp {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .faq-content-03 {
+        float: none !important;
+        width: 100% !important;
+    }
+
     /* Harita responsive */
     .contacts_map,
     .contacts_map iframe {
         height: 250px !important;
+        width: 100% !important;
     }
 
     /* Breadcrumb mobil */
@@ -346,6 +485,31 @@ video {
 
     .breadcrumbs li {
         padding: 0 8px;
+    }
+
+    /* Padding sınıfları override */
+    .pad-top-95 {
+        padding-top: 40px !important;
+    }
+
+    .pad-bt-110 {
+        padding-bottom: 50px !important;
+    }
+
+    .pad-top-78 {
+        padding-top: 40px !important;
+    }
+
+    .pad-bt-100 {
+        padding-bottom: 50px !important;
+    }
+
+    .pad-top-60 {
+        padding-top: 30px !important;
+    }
+
+    .pad-bt-80 {
+        padding-bottom: 40px !important;
     }
 }
 
@@ -386,13 +550,32 @@ video {
 
 @media only screen and (max-width: 480px) {
 
+    /* Hero section daha kompakt */
+    .img-box-02 {
+        padding-top: 40px !important;
+        padding-bottom: 35px !important;
+    }
+
+    .img-box-02 .title-06 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .img-box-02 .subtitle-07 {
+        font-size: 11px;
+    }
+
     /* Çok küçük ekranlar için ek düzenlemeler */
     .page-title-01 {
         font-size: 20px;
     }
 
     .title-02 {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    .title-03 {
+        font-size: 20px;
     }
 
     .subtitle-04 {
@@ -402,6 +585,17 @@ video {
     /* Randevu formu padding azalt */
     .appointment-form-wrapp {
         padding: 15px 10px;
+    }
+
+    /* Randevu kutusu mobil — taşma engelle */
+    .appointment-box-wrapp {
+        max-width: 100% !important;
+        overflow-x: auto !important;
+    }
+
+    .appointment-box {
+        width: 100% !important;
+        min-width: auto !important;
     }
 
     /* İletişim bilgileri blok */
@@ -430,7 +624,27 @@ video {
 
     /* Logo daha küçük */
     .header-box-01 .logo img {
-        max-height: 40px;
+        max-height: 38px;
+    }
+
+    /* Telefon bilgisi küçültme */
+    .phone-info {
+        font-size: 15px !important;
+    }
+
+    /* Testimonials küçült */
+    .testimonials__title {
+        font-size: 18px;
+    }
+
+    .owl-theme-01__item-text p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    /* Footer text */
+    .footer h3 {
+        font-size: 14px;
     }
 }
 
@@ -486,10 +700,36 @@ video {
 }
 
 /* ============================================
+   Anasayfa "Hakkımda" küçük portre
+   Abartısız, sade bir yazar dokunuşu: başlığın
+   üstünde küçük, yuvarlak, yumuşak gölgeli portre.
+   ============================================ */
+
+.about-us-content-01 .home-about-portrait {
+    display: block;
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 14px rgba(20, 40, 55, 0.12);
+}
+
+@media (max-width: 767px) {
+    .about-us-content-01 .home-about-portrait {
+        width: 72px;
+        height: 72px;
+    }
+}
+
+/* ============================================
    Print Media (Yazdırma)
    ============================================ */
 
 @media print {
+
     .main-nav,
     .info-block-01,
     .footer,
