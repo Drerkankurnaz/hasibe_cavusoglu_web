@@ -14,6 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         // Cloudflare proxy arkasında HTTPS ve gerçek IP algılaması
         $middleware->trustProxies(at: '*');
+
+        // Bakım modu kontrolü (admin paneli hariç)
+        $middleware->web(append: [
+            \App\Http\Middleware\CheckMaintenanceMode::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

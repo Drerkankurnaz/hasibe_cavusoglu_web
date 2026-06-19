@@ -7,6 +7,9 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Actions\Action;
+use Filament\Forms\Components\Placeholder;
 use Filament\Pages\SettingsPage;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Tabs;
@@ -292,6 +295,46 @@ class ManageSiteSettings extends SettingsPage
                                             ->nullable()
                                             ->placeholder('G-XXXXXXXXXX')
                                             ->maxLength(20),
+                                    ]),
+                            ]),
+
+                        Tab::make('Bakım Modu')
+                            ->icon('heroicon-o-wrench-screwdriver')
+                            ->schema([
+                                Section::make('Bakım Modu Ayarları')
+                                    ->description('Bakım modunu açtığınızda ziyaretçiler bakım sayfasını görür. Admin paneline erişim etkilenmez.')
+                                    ->schema([
+                                        Toggle::make('maintenance_mode')
+                                            ->label('Bakım Modu')
+                                            ->helperText('Aktif edildiğinde site ziyaretçilere bakım sayfası gösterir.')
+                                            ->onColor('danger')
+                                            ->offColor('success')
+                                            ->onIcon('heroicon-m-wrench')
+                                            ->offIcon('heroicon-m-check')
+                                            ->columnSpanFull(),
+                                        TextInput::make('maintenance_title')
+                                            ->label('Bakım Sayfası Başlığı')
+                                            ->required()
+                                            ->maxLength(255)
+                                            ->placeholder('Site Bakımda'),
+                                        Textarea::make('maintenance_message')
+                                            ->label('Bakım Mesajı')
+                                            ->required()
+                                            ->rows(4)
+                                            ->maxLength(1000)
+                                            ->helperText('Ziyaretçilere gösterilecek mesaj')
+                                            ->columnSpanFull(),
+                                        Placeholder::make('maintenance_preview')
+                                            ->label('Önizleme')
+                                            ->content(fn ($get) => new \Illuminate\Support\HtmlString(
+                                                '<div style="background:linear-gradient(135deg,#3d3272,#4eaac8);border-radius:12px;padding:30px;text-align:center;color:#fff;margin-top:8px;">' .
+                                                '<div style="font-size:40px;margin-bottom:12px;">🔧</div>' .
+                                                '<h3 style="font-size:20px;margin-bottom:8px;color:#fff;">' . e($get('maintenance_title') ?: 'Site Bakımda') . '</h3>' .
+                                                '<p style="font-size:14px;opacity:0.9;line-height:1.6;color:#fff;">' . e($get('maintenance_message') ?: 'Bakım mesajı...') . '</p>' .
+                                                '</div>'
+                                            ))
+                                            ->reactive()
+                                            ->columnSpanFull(),
                                     ]),
                             ]),
                     ])

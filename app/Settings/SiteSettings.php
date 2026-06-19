@@ -33,6 +33,11 @@ class SiteSettings extends Settings
     public string $why_choose_text;
     public array $why_choose_tabs;
 
+    // Bakım modu
+    public bool $maintenance_mode;
+    public string $maintenance_title;
+    public string $maintenance_message;
+
     public static function group(): string
     {
         return 'site';

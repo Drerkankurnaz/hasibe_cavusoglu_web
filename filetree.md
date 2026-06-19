@@ -232,3 +232,9 @@
 | docker/php/entrypoint.sh | 2026-06-18 | 892B |
 | deploy-remote.sh | 2026-06-19 | 2.1KB |
 | database/migrations/2024_01_02_000010_update_footer_text_setting.php | 2026-06-19 | 620B |
+| app/Http/Middleware/CheckMaintenanceMode.php | 2026-06-19 | 1.2KB |
+| database/settings/2026_06_19_000002_add_maintenance_mode_settings.php | 2026-06-19 | 380B |
+| resources/views/errors/503.blade.php | 2026-06-19 | 2.1KB |
+| docker/nginx/ssl/origin.pem | 2026-06-19 | 1.7KB |
+| docker/nginx/ssl/origin-key.pem | 2026-06-19 | 1.7KB |
+| docker/nginx/conf.d/ssl.conf | 2026-06-19 | 1.5KB |

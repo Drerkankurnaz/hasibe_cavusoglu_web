@@ -118,6 +118,13 @@ return [
         'go_home' => 'Anasayfaya Dön',
     ],
 
+    // Bakım modu
+    'maintenance' => [
+        'default_title' => 'Site Bakımda',
+        'default_message' => 'Sitemizi sizin için daha iyi hale getirmek adına kısa bir bakım çalışması yapıyoruz. Kısa süre içinde tekrar hizmetinizde olacağız.',
+        'thanks' => 'Anlayışınız için teşekkür ederiz.',
+    ],
+
     // Testimonials
     'testimonials' => [
         'title' => 'Danışan Yorumları',
