@@ -119,8 +119,15 @@
                                 <p>"{{ $testimonial->content }}"</p>
                             </div>
                             <div class="owl-theme-01__item-user">
+                                @php
+                                    $nameWords = preg_split('/\s+/', trim($testimonial->author_name), -1, PREG_SPLIT_NO_EMPTY);
+                                    $initials = mb_strtoupper(mb_substr($nameWords[0] ?? '', 0, 1));
+                                    if (count($nameWords) > 1) {
+                                        $initials .= mb_strtoupper(mb_substr(end($nameWords), 0, 1));
+                                    }
+                                @endphp
                                 <figure class="owl-theme-01__item-user-img">
-                                    <img src="{{ asset('img/shortcodes/users/user_01.jpg') }}" alt="{{ $testimonial->author_name }}">
+                                    <span class="testimonial-avatar" role="img" aria-label="{{ $testimonial->author_name }}">{{ $initials }}</span>
                                 </figure>
                                 <h3 class="owl-theme-01__item-user-name">{{ $testimonial->author_name }}</h3>
                                 @if($testimonial->rating)

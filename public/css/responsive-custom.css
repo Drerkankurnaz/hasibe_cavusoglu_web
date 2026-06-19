@@ -461,6 +461,31 @@ video {
 }
 
 /* ============================================
+   Referans Avatarları (isim baş harfli)
+   Sahte stok portre yerine danışan adının baş
+   harflerinden üretilen, marka rengiyle uyumlu avatar.
+   ============================================ */
+
+.owl-theme-01__item-user-img .testimonial-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4eaac8 0%, #3d7f99 100%);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* ============================================
    Print Media (Yazdırma)
    ============================================ */
 
