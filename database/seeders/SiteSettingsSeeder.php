@@ -20,11 +20,15 @@ class SiteSettingsSeeder extends Seeder
         $settings->whatsapp = '+905551234567';
         $settings->email = 'info@hasibecavusoglu.com';
         $settings->address = 'Öğretmenevleri Mah. 922. Sokak No:3 Duran Plaza Kat:3 D:18, Konyaaltı / Antalya';
-        // API anahtarı gerektirmeyen, adres tabanlı Google Maps embed (q= formatı).
-        // Google'ın "pb=" formatı yalnızca Google tarafından üretilen imzalı kodla
-        // çalışır; elle düzenlenince "Invalid pb parameter" hatası verir.
-        $mapQuery = rawurlencode($settings->address);
-        $settings->map_embed = '<iframe src="https://maps.google.com/maps?q=' . $mapQuery . '&hl=tr&z=15&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+        // API anahtarı gerektirmeyen Google Maps embed.
+        // NOT: q= ile serbest metin adresi (özellikle "Kat/Daire/Plaza" gibi
+        // detaylar + Türkçe karakter) Google geocode'unu şaşırtıp boş/okyanus
+        // harita döndürebiliyor. Bu yüzden embed'i doğrulanmış KOORDİNATA bağlıyoruz
+        // (Öğretmenevleri Mah., Konyaaltı/Antalya merkezi). Bina seviyesinde tam
+        // iğne için panelden Google "Haritayı yerleştir" iframe'i yapıştırılabilir.
+        $mapLat = '36.8750523';
+        $mapLng = '30.6409066';
+        $settings->map_embed = '<iframe src="https://maps.google.com/maps?q=' . $mapLat . ',' . $mapLng . '&hl=tr&z=16&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
         // Anahtarlar 'label'/'value' olmalı — admin paneli (ManageSiteSettings)
         // ve footer/header blade şablonları bu anahtarları okur.
         $settings->working_hours = [
