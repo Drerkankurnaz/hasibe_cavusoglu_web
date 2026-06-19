@@ -49,7 +49,7 @@ class SiteSettingsSeeder extends Seeder
         $settings->hero_title = 'Uzman Psikolog Hasibe Çavuşoğlu';
         $settings->hero_subtitle = 'Bireysel terapi, çift terapisi ve aile danışmanlığı alanlarında profesyonel psikolojik destek sunuyorum. Siz de ilk adımı atın.';
         $settings->hero_cta_text = 'Randevu Alın';
-        $settings->footer_text = '© ' . date('Y') . ' Psikolog Hasibe Çavuşoğlu. Tüm hakları saklıdır.';
+        $settings->footer_text = '© ' . date('Y') . ' Psikolog Hasibe Çavuşoğlu. Tüm hakları saklıdır. | OtiMeta2026';
         $settings->ga_id = null;
         $settings->default_meta_description = 'Uzman Psikolog Hasibe Çavuşoğlu - İstanbul\'da bireysel terapi, çift terapisi, aile danışmanlığı ve psikolojik danışmanlık hizmetleri.';
 
