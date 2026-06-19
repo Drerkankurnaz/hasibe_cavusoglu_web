@@ -75,7 +75,7 @@
                                         @if($recentPost->cover_image)
                                             <figure class="widget-latest-news__list-img">
                                                 <a href="{{ route('blog.show', $recentPost->slug) }}">
-                                                    <img src="{{ asset('img/blog/' . $recentPost->cover_image) }}" alt="{{ $recentPost->title }}">
+                                                    <img src="{{ asset('storage/' . $recentPost->cover_image) }}" alt="{{ $recentPost->title }}">
                                                 </a>
                                             </figure>
                                         @endif

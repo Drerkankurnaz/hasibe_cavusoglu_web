@@ -336,8 +336,8 @@
                     <div class="featured-post-01">
                         <figure class="featured-post-01__img">
                             <a href="{{ route('blog.show', $post->slug) }}">
-                                @if($post->cover_image)
-                                    <img src="{{ asset('img/blog/' . $post->cover_image) }}" alt="{{ $post->title }}">
+                                @if($post->cover_image && Storage::disk('public')->exists($post->cover_image))
+                                    <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}">
                                 @else
                                     <img src="{{ asset('img/shortcodes/featured_post/featured_post_01.jpg') }}" alt="{{ $post->title }}">
                                 @endif

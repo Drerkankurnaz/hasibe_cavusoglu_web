@@ -1,10 +1,10 @@
 @props(['post'])
 
 <article class="blog-post">
-    @if($post->cover_image)
+    @if($post->cover_image && Storage::disk('public')->exists($post->cover_image))
         <figure class="blog-post__img">
             <a href="{{ route('blog.show', $post->slug) }}">
-                <img src="{{ asset('img/blog/' . $post->cover_image) }}" alt="{{ $post->title }}">
+                <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}">
             </a>
         </figure>
     @endif

@@ -38,9 +38,9 @@
                 <div class="col-lg-12">
                     <div class="blog-listing single-post right">
                         <article class="blog-post">
-                            @if($post->cover_image)
+                            @if($post->cover_image && Storage::disk('public')->exists($post->cover_image))
                                 <figure class="blog-post__img">
-                                    <img src="{{ asset('img/blog/' . $post->cover_image) }}" alt="{{ $post->title }}">
+                                    <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}">
                                 </figure>
                             @endif
 
@@ -111,7 +111,7 @@
                                             @if($relatedPost->cover_image)
                                                 <figure class="featured-post-01__img">
                                                     <a href="{{ route('blog.show', $relatedPost->slug) }}">
-                                                        <img src="{{ asset('img/blog/' . $relatedPost->cover_image) }}" alt="{{ $relatedPost->title }}">
+                                                        <img src="{{ asset('storage/' . $relatedPost->cover_image) }}" alt="{{ $relatedPost->title }}">
                                                     </a>
                                                 </figure>
                                             @endif

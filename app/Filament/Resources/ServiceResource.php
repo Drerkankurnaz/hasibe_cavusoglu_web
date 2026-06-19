@@ -67,7 +67,11 @@ class ServiceResource extends Resource
                                     ->label('Görsel')
                                     ->image()
                                     ->directory('services')
-                                    ->maxSize(2048),
+                                    ->maxSize(2048)
+                                    ->imageResizeMode('cover')
+                                    ->imageCropAspectRatio('4:3')
+                                    ->imageResizeTargetWidth('800')
+                                    ->imageResizeTargetHeight('600'),
 
                                 Forms\Components\TextInput::make('price')
                                     ->label('Fiyat')

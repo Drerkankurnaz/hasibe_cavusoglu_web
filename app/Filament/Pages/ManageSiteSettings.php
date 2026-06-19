@@ -75,7 +75,11 @@ class ManageSiteSettings extends SettingsPage
                                             ->disk('public')
                                             ->directory('site')
                                             ->nullable()
-                                            ->helperText('Boş bırakılırsa varsayılan görsel kullanılır. Önerilen: geniş yatay görsel (örn. 1920×657).')
+                                            ->imageResizeMode('cover')
+                                            ->imageCropAspectRatio('16:9')
+                                            ->imageResizeTargetWidth('1920')
+                                            ->imageResizeTargetHeight('1080')
+                                            ->helperText('Boş bırakılırsa varsayılan görsel kullanılır. Önerilen: geniş yatay görsel (örn. 1920×1080).')
                                             ->columnSpanFull(),
                                     ]),
 
@@ -129,7 +133,11 @@ class ManageSiteSettings extends SettingsPage
                                             ->disk('public')
                                             ->directory('site')
                                             ->nullable()
-                                            ->helperText('Boş bırakılırsa varsayılan portre kullanılır.')
+                                            ->imageResizeMode('cover')
+                                            ->imageCropAspectRatio('3:4')
+                                            ->imageResizeTargetWidth('600')
+                                            ->imageResizeTargetHeight('800')
+                                            ->helperText('Boş bırakılırsa varsayılan portre kullanılır. Önerilen: dikey görsel (3:4 oranı).')
                                             ->columnSpanFull(),
                                     ]),
 
