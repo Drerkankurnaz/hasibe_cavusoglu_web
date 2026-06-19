@@ -700,44 +700,27 @@ video {
 }
 
 /* ============================================
-   Hero (üst banner) portresi
-   Büyük, yuvarlak portre. Masaüstünde metnin sağında
-   dikey ortalı (akışı bozmadan, absolute); mobilde
-   metnin üstünde daha küçük.
+   Anasayfa "Hakkımda" yan görseli (index_02 düzeni)
+   Portreyi yumuşak köşeli, dengeli bir kutuda göster.
    ============================================ */
 
-.img-box-02 .col-lg-12 {
-    position: relative;
+.about-us-img-01 img {
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 14px 40px rgba(20, 40, 55, 0.18);
 }
 
-.img-box-02 .hero-portrait {
-    width: 210px;
-    height: 210px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 12px 34px rgba(20, 40, 55, 0.28);
-    z-index: 2;
+/* Değerler bölümü merkez görseli — taşmayı engelle, ortala */
+.home-values-img {
+    text-align: center;
 }
 
-@media (min-width: 992px) {
-    .img-box-02 .hero-portrait {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .img-box-02 .hero-portrait {
-        display: block;
-        width: 150px;
-        height: 150px;
-        margin: 0 0 22px;
-    }
+.home-values-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* ============================================

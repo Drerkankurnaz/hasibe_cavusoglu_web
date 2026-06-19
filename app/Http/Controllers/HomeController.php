@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\Testimonial;
@@ -16,7 +17,8 @@ class HomeController extends Controller
         $services = Service::active()->get();
         $posts = Post::published()->latest('published_at')->take(3)->get();
         $testimonials = Testimonial::approved()->get();
+        $faqs = Faq::active()->take(4)->get();
 
-        return view('pages.home', compact('settings', 'services', 'posts', 'testimonials'));
+        return view('pages.home', compact('settings', 'services', 'posts', 'testimonials', 'faqs'));
     }
 }
