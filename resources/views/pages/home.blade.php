@@ -10,7 +10,7 @@
 <main class="content-row">
 
     {{-- Hero (index_02: img-box-01, ortalı) --}}
-    <div class="img-box-01">
+    <div class="img-box-01" @if($settings->hero_image) style="background-image: url('{{ asset('storage/' . $settings->hero_image) }}');" @endif>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -32,27 +32,15 @@
                 <div class="col-lg-12">
                     <div class="icon-boxes-04-wrapp">
                         <div class="icon-boxes-04-row">
+                            @foreach(($settings->intro_boxes ?? []) as $i => $box)
                             <div class="icon-boxes-04">
-                                <p class="icon-boxes-04__icon">01</p>
-                                <h4 class="icon-boxes-04__title">Uzman Klinik Psikolog</h4>
+                                <p class="icon-boxes-04__icon">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</p>
+                                <h4 class="icon-boxes-04__title">{{ $box['title'] ?? '' }}</h4>
                                 <div class="icon-boxes-04__text">
-                                    <p>Bireylere, çiftlere ve ailelere yönelik profesyonel psikolojik danışmanlık ve terapi hizmeti sunuyorum.</p>
+                                    <p>{{ $box['text'] ?? '' }}</p>
                                 </div>
                             </div>
-                            <div class="icon-boxes-04">
-                                <p class="icon-boxes-04__icon">02</p>
-                                <h4 class="icon-boxes-04__title">Kanıta Dayalı Yöntemler</h4>
-                                <div class="icon-boxes-04__text">
-                                    <p>Bilişsel davranışçı terapi, şema terapi ve EMDR gibi etkinliği bilimsel olarak desteklenen yaklaşımlarla çalışıyorum.</p>
-                                </div>
-                            </div>
-                            <div class="icon-boxes-04">
-                                <p class="icon-boxes-04__icon">03</p>
-                                <h4 class="icon-boxes-04__title">Güvenli ve Gizli Alan</h4>
-                                <div class="icon-boxes-04__text">
-                                    <p>Görüşmeler tamamen gizli, yargısız ve güvenli bir ortamda yürütülür. Kendinizi rahatça ifade edebilirsiniz.</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -67,11 +55,13 @@
                 <div class="col-lg-6">
                     <div class="about-me-cont">
                         <p class="subtitle-01">Hakkımda</p>
-                        <h3 class="title-03">Merhaba! Ben
-                            <span>Uzman Psikolog Hasibe Çavuşoğlu</span>
+                        <h3 class="title-03">
+                            <span>{{ $settings->about_title }}</span>
                         </h3>
                         <div class="about-me-text-01">
-                            <p>Uzman klinik psikolog olarak yıllardır bireylere, çiftlere ve ailelere profesyonel psikolojik destek sunmaktayım. Amacım; güvenli, gizli ve yargısız bir ortamda, kanıta dayalı yöntemlerle yanınızda olmak ve içsel potansiyelinizi keşfetmenize yardımcı olmaktır. Geçmişi değiştiremesek de, yaşamınızdaki zorlukları birlikte anlayıp çözebiliriz.</p>
+                            @foreach(preg_split('/\R\s*\R/', trim($settings->about_text)) as $para)
+                                @if(trim($para) !== '')<p>{{ $para }}</p>@endif
+                            @endforeach
                         </div>
                         <p class="about-me-meta">Hemen arayın ve
                             <a href="{{ route('appointment.create') }}">randevu oluşturun</a>
@@ -87,7 +77,7 @@
                 </div>
                 <div class="col-lg-6 text-md-center">
                     <figure class="about-us-img-01 mar-top-20">
-                        <img src="{{ asset('img/about_me/about_me_img.jpg') }}" alt="Uzman Psikolog Hasibe Çavuşoğlu">
+                        <img src="{{ $settings->about_image ? asset('storage/' . $settings->about_image) : asset('img/about_me/about_me_img.jpg') }}" alt="{{ $settings->about_title }}">
                     </figure>
                 </div>
             </div>
@@ -183,53 +173,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
+                    @php
+                        $valueIcons = ['box_icon_01.png', 'box_icon_04.png', 'box_icon_02.png', 'box_icon_05.png', 'box_icon_03.png', 'box_icon_06.png'];
+                        $allValues = $settings->values ?? [];
+                        $valuesCol1 = array_slice($allValues, 0, 3);
+                        $valuesCol2 = array_slice($allValues, 3, 3);
+                    @endphp
                     <div class="icon-boxes-in-wrapp">
                         <div class="icon-boxes-in-wrapp-row">
                             <div class="icon-boxes-in">
+                                @foreach($valuesCol1 as $i => $v)
                                 <div class="icon-boxes-02 icon--02">
                                     <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_01.png') }}" alt="Gizlilik">
+                                        <img src="{{ asset('img/icons/' . ($valueIcons[$i] ?? 'box_icon_01.png')) }}" alt="{{ $v['title'] ?? '' }}">
                                     </figure>
-                                    <h5 class="icon-boxes-02__title">Gizlilik</h5>
-                                    <p class="icon-boxes-02__text">Tüm görüşmeler gizlidir ve paylaştığınız bilgiler korunur. Mahremiyetiniz önceliğimizdir.</p>
+                                    <h5 class="icon-boxes-02__title">{{ $v['title'] ?? '' }}</h5>
+                                    <p class="icon-boxes-02__text">{{ $v['text'] ?? '' }}</p>
                                 </div>
-                                <div class="icon-boxes-02 icon--02">
-                                    <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_04.png') }}" alt="Profesyonellik">
-                                    </figure>
-                                    <h5 class="icon-boxes-02__title">Profesyonellik</h5>
-                                    <p class="icon-boxes-02__text">Etik ilkelere bağlı, kanıta dayalı ve profesyonel bir yaklaşımla hizmet veriyorum.</p>
-                                </div>
-                                <div class="icon-boxes-02 icon--02">
-                                    <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_02.png') }}" alt="Destek">
-                                    </figure>
-                                    <h5 class="icon-boxes-02__title">İçten Destek</h5>
-                                    <p class="icon-boxes-02__text">Zorlandığınız her konuda, yargılamadan ve içtenlikle yanınızda olmaya özen gösteriyorum.</p>
-                                </div>
+                                @endforeach
                             </div>
                             <div class="icon-boxes-in">
+                                @foreach($valuesCol2 as $i => $v)
                                 <div class="icon-boxes-02 icon-boxes-02--right icon--02">
                                     <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_05.png') }}" alt="Deneyim">
+                                        <img src="{{ asset('img/icons/' . ($valueIcons[$i + 3] ?? 'box_icon_06.png')) }}" alt="{{ $v['title'] ?? '' }}">
                                     </figure>
-                                    <h5 class="icon-boxes-02__title">Deneyim</h5>
-                                    <p class="icon-boxes-02__text">Yıllara dayanan klinik deneyimle farklı yaş ve ihtiyaçlardaki danışanlarla çalışıyorum.</p>
+                                    <h5 class="icon-boxes-02__title">{{ $v['title'] ?? '' }}</h5>
+                                    <p class="icon-boxes-02__text">{{ $v['text'] ?? '' }}</p>
                                 </div>
-                                <div class="icon-boxes-02 icon-boxes-02--right icon--02">
-                                    <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_03.png') }}" alt="Gelişim">
-                                    </figure>
-                                    <h5 class="icon-boxes-02__title">Sürekli Gelişim</h5>
-                                    <p class="icon-boxes-02__text">Düzenli eğitim ve süpervizyonlarla mesleki bilgimi güncel tutuyorum.</p>
-                                </div>
-                                <div class="icon-boxes-02 icon-boxes-02--right icon--02">
-                                    <figure class="icon-boxes-02__icon">
-                                        <img src="{{ asset('img/icons/box_icon_06.png') }}" alt="Güvenilirlik">
-                                    </figure>
-                                    <h5 class="icon-boxes-02__title">Güvenilirlik</h5>
-                                    <p class="icon-boxes-02__text">Süreç boyunca yanınızdayım. Bir adım atmaya hazır olduğunuzda bana ulaşabilirsiniz.</p>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -245,34 +217,37 @@
                 <div class="col-md-6 col-lg-6">
                     <div class="why-choose-me-box">
                         <p class="subtitle-01">Yaklaşımım</p>
-                        <h3 class="title-02 mar-bt-21">Neden
-                            <span>Beni Seçmelisiniz</span>
+                        <h3 class="title-02 mar-bt-21">
+                            <span>{{ $settings->why_choose_title }}</span>
                         </h3>
                         <div class="serv-content-02">
-                            <p>Terapiye sıcak, samimi ve gerçekçi bir yaklaşım sunuyorum; konuşabileceğiniz güvenli, gizli ve yargısız bir alan oluşturuyorum.</p>
+                            <p>{{ $settings->why_choose_text }}</p>
                         </div>
+                        @php $whyTabs = $settings->why_choose_tabs ?? []; @endphp
+                        @if(count($whyTabs) > 0)
                         <div class="tabs tabs-horizontal-01">
                             <ul class="tabs__caption">
-                                <li class="active">Avantajlar</li>
-                                <li>Süreç</li>
-                                <li>Sonuçlar</li>
+                                @foreach($whyTabs as $i => $tab)
+                                <li class="{{ $i === 0 ? 'active' : '' }}">{{ $tab['title'] ?? '' }}</li>
+                                @endforeach
                             </ul>
-                            <div class="tabs__content active">
-                                <p>Kanıta dayalı psikoterapilerde eğitim ve deneyimimle, her danışanın ihtiyacına göre esnek ve iş birlikçi bir terapi süreci yürütüyorum.</p>
-                                <ul class="list-01 list-01--style-01">
-                                    <li>Ücretsiz ön görüşme ve değerlendirme</li>
-                                    <li>Online ve yüz yüze görüşme imkânı</li>
-                                    <li>Tamamen gizli ve kişiye özel süreç</li>
-                                    <li>İhtiyaca göre uyarlanmış terapi planı</li>
-                                </ul>
+                            @foreach($whyTabs as $i => $tab)
+                            @php $lines = array_values(array_filter(array_map('trim', preg_split('/\R/', $tab['content'] ?? '')), fn ($l) => $l !== '')); @endphp
+                            <div class="tabs__content {{ $i === 0 ? 'active' : '' }}">
+                                @if(count($lines) > 1)
+                                    <p>{{ $lines[0] }}</p>
+                                    <ul class="list-01 list-01--style-01">
+                                        @foreach(array_slice($lines, 1) as $line)
+                                            <li>{{ $line }}</li>
+                                        @endforeach
+                                    </ul>
+                                @else
+                                    <p>{{ $lines[0] ?? '' }}</p>
+                                @endif
                             </div>
-                            <div class="tabs__content">
-                                <p>İlk görüşmede sizi tanır, ihtiyaçlarınızı birlikte değerlendiririz. Ardından size en uygun yöntemi belirleyip adım adım ilerleyen, şeffaf bir terapi süreci planlarız.</p>
-                            </div>
-                            <div class="tabs__content">
-                                <p>Hedefimiz; duygusal dayanıklılığınızı artırmak, ilişkilerinizi güçlendirmek ve günlük yaşamınızda kendinizi daha iyi hissetmenizi sağlamaktır. İlerleme süreç içinde birlikte değerlendirilir.</p>
-                            </div>
+                            @endforeach
                         </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6">

@@ -68,6 +68,14 @@ class ManageSiteSettings extends SettingsPage
                                             ->label('Hero Buton Metni')
                                             ->required()
                                             ->maxLength(100),
+                                        FileUpload::make('hero_image')
+                                            ->label('Hero Arka Plan Görseli')
+                                            ->image()
+                                            ->disk('public')
+                                            ->directory('site')
+                                            ->nullable()
+                                            ->helperText('Boş bırakılırsa varsayılan görsel kullanılır. Önerilen: geniş yatay görsel (örn. 1920×657).')
+                                            ->columnSpanFull(),
                                     ]),
 
                                 Section::make('Footer')
@@ -76,6 +84,102 @@ class ManageSiteSettings extends SettingsPage
                                             ->label('Footer Metni')
                                             ->required()
                                             ->maxLength(500),
+                                    ]),
+                            ]),
+
+                        Tab::make('Anasayfa')
+                            ->icon('heroicon-o-home')
+                            ->schema([
+                                Section::make('Tanıtım Kutuları (01 / 02 / 03)')
+                                    ->description('Hero altındaki numaralı üç kutu.')
+                                    ->schema([
+                                        Repeater::make('intro_boxes')
+                                            ->label('Tanıtım Kutuları')
+                                            ->schema([
+                                                TextInput::make('title')
+                                                    ->label('Başlık')
+                                                    ->required(),
+                                                Textarea::make('text')
+                                                    ->label('Açıklama')
+                                                    ->required()
+                                                    ->rows(2),
+                                            ])
+                                            ->maxItems(3)
+                                            ->reorderable()
+                                            ->collapsible()
+                                            ->itemLabel(fn (array $state): ?string => $state['title'] ?? null),
+                                    ]),
+
+                                Section::make('Hakkımda Bölümü')
+                                    ->schema([
+                                        TextInput::make('about_title')
+                                            ->label('Başlık')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Textarea::make('about_text')
+                                            ->label('Metin')
+                                            ->helperText('Paragrafları boş satırla ayırabilirsiniz.')
+                                            ->required()
+                                            ->rows(7)
+                                            ->columnSpanFull(),
+                                        FileUpload::make('about_image')
+                                            ->label('Yan Görsel (Portre)')
+                                            ->image()
+                                            ->disk('public')
+                                            ->directory('site')
+                                            ->nullable()
+                                            ->helperText('Boş bırakılırsa varsayılan portre kullanılır.')
+                                            ->columnSpanFull(),
+                                    ]),
+
+                                Section::make('Değerler / İlkeler')
+                                    ->description('Altı kutu. İkonlar sırayla sabittir; başlık ve metni düzenleyebilirsiniz.')
+                                    ->schema([
+                                        Repeater::make('values')
+                                            ->label('Değerler')
+                                            ->schema([
+                                                TextInput::make('title')
+                                                    ->label('Başlık')
+                                                    ->required(),
+                                                Textarea::make('text')
+                                                    ->label('Açıklama')
+                                                    ->required()
+                                                    ->rows(2),
+                                            ])
+                                            ->maxItems(6)
+                                            ->reorderable()
+                                            ->collapsible()
+                                            ->itemLabel(fn (array $state): ?string => $state['title'] ?? null),
+                                    ]),
+
+                                Section::make('Neden Beni Seçmelisiniz')
+                                    ->schema([
+                                        TextInput::make('why_choose_title')
+                                            ->label('Başlık')
+                                            ->required()
+                                            ->maxLength(255),
+                                        Textarea::make('why_choose_text')
+                                            ->label('Giriş Metni')
+                                            ->required()
+                                            ->rows(2)
+                                            ->columnSpanFull(),
+                                        Repeater::make('why_choose_tabs')
+                                            ->label('Sekmeler')
+                                            ->schema([
+                                                TextInput::make('title')
+                                                    ->label('Sekme Başlığı')
+                                                    ->required(),
+                                                Textarea::make('content')
+                                                    ->label('İçerik')
+                                                    ->helperText('Her satır ayrı bir madde olarak gösterilebilir.')
+                                                    ->required()
+                                                    ->rows(4),
+                                            ])
+                                            ->maxItems(5)
+                                            ->reorderable()
+                                            ->collapsible()
+                                            ->itemLabel(fn (array $state): ?string => $state['title'] ?? null)
+                                            ->columnSpanFull(),
                                     ]),
                             ]),
 
