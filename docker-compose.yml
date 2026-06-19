@@ -40,8 +40,6 @@ services:
       - .:/var/www/html:ro
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./docker/nginx/conf.d:/etc/nginx/conf.d:ro
-      - certbot_conf:/etc/letsencrypt:ro
-      - certbot_www:/var/www/certbot:ro
     depends_on:
       app:
         condition: service_healthy
@@ -103,8 +101,4 @@ volumes:
   vendor_data:
     driver: local
   storage_data:
-    driver: local
-  certbot_conf:
-    driver: local
-  certbot_www:
     driver: local

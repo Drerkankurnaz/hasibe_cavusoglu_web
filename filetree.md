@@ -230,3 +230,4 @@
 | .env.docker | 2025-07-22 | 1.1KB |
 | Makefile | 2025-07-21 | 2.0KB |
 | docker/php/entrypoint.sh | 2026-06-18 | 892B |
+| deploy-remote.sh | 2026-06-19 | 2.1KB |
