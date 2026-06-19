@@ -296,6 +296,37 @@ class ManageSiteSettings extends SettingsPage
                                     ]),
                             ]),
 
+                        Tab::make('Eğitim & Sertifikalar')
+                            ->icon('heroicon-o-academic-cap')
+                            ->schema([
+                                Section::make('Eğitim ve Sertifikalar')
+                                    ->description('Hakkımda sayfasında gösterilen eğitim ve sertifika bilgileri.')
+                                    ->schema([
+                                        Repeater::make('certificates')
+                                            ->label('Sertifikalar')
+                                            ->schema([
+                                                TextInput::make('date')
+                                                    ->label('Tarih / Dönem')
+                                                    ->required()
+                                                    ->placeholder('Örn: 2025 veya 2024 – 2025'),
+                                                TextInput::make('title')
+                                                    ->label('Eğitim / Sertifika Adı')
+                                                    ->required()
+                                                    ->maxLength(255),
+                                                TextInput::make('desc')
+                                                    ->label('Açıklama / Kurum')
+                                                    ->required()
+                                                    ->maxLength(500)
+                                                    ->placeholder('Eğitmen adı — Kurum bilgisi'),
+                                            ])
+                                            ->reorderable()
+                                            ->collapsible()
+                                            ->cloneable()
+                                            ->itemLabel(fn (array $state): ?string => $state['title'] ?? null)
+                                            ->columnSpanFull(),
+                                    ]),
+                            ]),
+
                         Tab::make('Bakım Modu')
                             ->icon('heroicon-o-wrench-screwdriver')
                             ->schema([

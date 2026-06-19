@@ -38,6 +38,9 @@ class SiteSettings extends Settings
     public string $maintenance_title;
     public string $maintenance_message;
 
+    // Eğitim ve Sertifikalar
+    public array $certificates;
+
     public static function group(): string
     {
         return 'site';
