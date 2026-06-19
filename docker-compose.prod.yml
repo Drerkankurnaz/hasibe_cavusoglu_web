@@ -9,7 +9,8 @@ services:
       - APP_ENV=production
       - APP_DEBUG=false
 
-  # Nginx - sadece port 80 (Cloudflare SSL yonetir)
+  # Nginx - port 80 + 443 (Cloudflare Origin SSL)
   nginx:
     ports:
       - "80:80"
+      - "443:443"
