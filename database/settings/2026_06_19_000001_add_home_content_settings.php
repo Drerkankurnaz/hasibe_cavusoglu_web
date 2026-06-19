@@ -43,7 +43,7 @@ return new class extends SettingsMigration
 
         // Neden Beni Seçmelisiniz
         $this->migrator->add('site.why_choose_title', 'Neden Beni Seçmelisiniz');
-        $this->migrator->add('site.why_choose_text', 'Terapiye sıcak, samimi ve gerçekçi bir yaklaşım sunuyorum; konuşabileceğiniz güvenli, gizli ve yargısız bir alan oluşturuyorum.');
+        $this->migrator->add('site.why_choose_text', 'Her danışanın yaşam öyküsünü biricik kabul eden bütüncül bir anlayışla çalışıyorum. Bilimsel temelli yöntemleri; güvene, gizliliğe ve karşılıklı saygıya dayanan bir terapötik ilişkiyle birleştirerek kişiye özel, şeffaf ve sürece saygılı bir destek sunuyorum.');
         $this->migrator->add('site.why_choose_tabs', [
             [
                 'title' => 'Avantajlar',
