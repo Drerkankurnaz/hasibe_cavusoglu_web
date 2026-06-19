@@ -1,7 +1,7 @@
 @props(['service'])
 
 <div class="treatments-box">
-    @if($service->image)
+    @if($service->image && Storage::disk('public')->exists($service->image))
         <figure class="treatments-box__img">
             <a href="{{ route('services.show', $service->slug) }}">
                 <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">

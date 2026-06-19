@@ -84,7 +84,7 @@
             <div class="banners-box-01">
                 <figure class="banners-box-01__img">
                     <a href="{{ route('services.show', $service->slug) }}">
-                        @if($service->image)
+                        @if($service->image && Storage::disk('public')->exists($service->image))
                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">
                         @elseif($service->icon)
                             <img src="{{ asset('img/services/treatments/' . $service->icon) }}" alt="{{ $service->title }}">
@@ -133,7 +133,7 @@
                             <div class="owl-treatments">
                                 <figure class="owl-treatments__img">
                                     <a href="{{ route('services.show', $service->slug) }}">
-                                        @if($service->image)
+                                        @if($service->image && Storage::disk('public')->exists($service->image))
                                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">
                                         @elseif($service->icon)
                                             <img src="{{ asset('img/services/treatments/' . $service->icon) }}" alt="{{ $service->title }}">

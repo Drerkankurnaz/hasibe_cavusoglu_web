@@ -36,9 +36,13 @@
                 <div class="col-md-8 col-lg-8">
                     <div class="single-service right">
                         {{-- Service Image --}}
-                        @if($service->image)
+                        @if($service->image && Storage::disk('public')->exists($service->image))
                             <figure class="single-service__img">
                                 <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">
+                            </figure>
+                        @elseif($service->icon)
+                            <figure class="single-service__img">
+                                <img src="{{ asset('img/services/treatments/' . $service->icon) }}" alt="{{ $service->title }}">
                             </figure>
                         @endif
 
