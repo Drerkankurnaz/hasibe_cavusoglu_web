@@ -14,6 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-left">
+                    <img src="{{ asset('img/about_me/about_me_img.jpg') }}" alt="Uzman Psikolog Hasibe Çavuşoğlu" class="hero-portrait">
                     <p class="subtitle-07">{{ $settings->hero_subtitle }}</p>
                     <h1 class="title-06">
                         {!! nl2br(e($settings->hero_title)) !!}
