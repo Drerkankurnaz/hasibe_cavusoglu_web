@@ -35,12 +35,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="about-me-cont-02">
-                        <p class="subtitle-01">Uzman Klinik Psikolog</p>
+                        <p class="subtitle-01">{{ $settings->about_page_subtitle }}</p>
                         <h3 class="title-03">Merhaba! Ben
                             <span>Hasibe Çavuşoğlu</span>
                         </h3>
                         <div class="about-me-text-01">
-                            <p>Çocuk, ergen ve yetişkinlerle psikoterapi çalışmaları yürüten bir Uzman Klinik Psikoloğum. Bilişsel Davranışçı Terapi ve EMDR ekolleriyle, kanıta dayalı yöntemlerle danışanlarımın yaşam kalitesini artırmayı hedefliyorum.</p>
+                            <p>{{ $settings->about_page_bio }}</p>
                         </div>
                         <p class="about-me-meta">Hemen Arayın ve
                             <a href="{{ route('appointment.create') }}">Randevu Alın</a>
@@ -131,62 +131,21 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_01.png') }}" alt="Gizlilik">
-                        </figure>
-                        <h3 class="about-me-serv__title">Gizlilik</h3>
-                        <p class="about-me-serv__text">Tüm görüşmelerimiz gizlidir ve bilgileriniz korunmaktadır. Güvenliğiniz konusunda endişelenmeyin.</p>
+                @php $aboutValues = $settings->values ?? []; @endphp
+                @foreach($aboutValues as $i => $value)
+                    @if($i % 3 === 0 && $i > 0)
+                        </div><div class="row">
+                    @endif
+                    <div class="col-sm-4 col-md-4 col-lg-4">
+                        <div class="about-me-serv">
+                            <figure class="about-me-serv__icon">
+                                <img src="{{ asset('img/about_me/icons/icon_0' . (($i % 6) + 1) . '.png') }}" alt="{{ $value['title'] ?? '' }}">
+                            </figure>
+                            <h3 class="about-me-serv__title">{{ $value['title'] ?? '' }}</h3>
+                            <p class="about-me-serv__text">{{ $value['text'] ?? '' }}</p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_02.png') }}" alt="Destek">
-                        </figure>
-                        <h3 class="about-me-serv__title">7/24 Destek</h3>
-                        <p class="about-me-serv__text">Günün her saatinde beni arayabilirsiniz. Zor anlarınızda size destek olmaya her zaman hazırım.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_03.png') }}" alt="Gelişim">
-                        </figure>
-                        <h3 class="about-me-serv__title">Sürekli Gelişim</h3>
-                        <p class="about-me-serv__text">Kendimi geliştirmeye ve yeni ufuklara ulaşmaya çalışıyorum. Çeşitli eğitim ve seminerlere katılıyorum.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_04.png') }}" alt="Profesyonellik">
-                        </figure>
-                        <h3 class="about-me-serv__title">Profesyonellik</h3>
-                        <p class="about-me-serv__text">Sizin için yalnızca %100 profesyonel ve kaliteli hizmet sunuyorum. En iyi terapötik yaklaşımları uyguluyorum.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_05.png') }}" alt="Deneyim">
-                        </figure>
-                        <h3 class="about-me-serv__title">Deneyim</h3>
-                        <p class="about-me-serv__text">Psikolojik sorunlarla mücadele eden bireylerle özel pratikte uzun yıllara dayanan deneyimim bulunmaktadır.</p>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="about-me-serv">
-                        <figure class="about-me-serv__icon">
-                            <img src="{{ asset('img/about_me/icons/icon_06.png') }}" alt="Güvenilirlik">
-                        </figure>
-                        <h3 class="about-me-serv__title">Güvenilirlik</h3>
-                        <p class="about-me-serv__text">Zor anlarınızda sizi asla yalnız bırakmam. Hemen arayın ve randevu alın.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -197,10 +156,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="action-box-01__wrapp">
-                        <h3 class="action-box-01__title">Hemen Danışmanlık Alın!
+                        <h3 class="action-box-01__title">{{ $settings->about_page_cta_title }}
                             <span>Arayın: {{ $settings->phone ?? '' }}</span>
                         </h3>
-                        <p class="action-box-01__subtitle">Profesyonel ve deneyimli psikolog olarak size yardımcı olmak için buradayım</p>
+                        <p class="action-box-01__subtitle">{{ $settings->about_page_cta_subtitle }}</p>
                     </div>
                     <div class="action-box-01__btn-wrapp">
                         <a href="{{ route('appointment.create') }}" class="action-box-01__btn">Randevu Al</a>

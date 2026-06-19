@@ -41,6 +41,12 @@ class SiteSettings extends Settings
     // Eğitim ve Sertifikalar
     public array $certificates;
 
+    // Hakkımda sayfası
+    public string $about_page_subtitle;
+    public string $about_page_bio;
+    public string $about_page_cta_title;
+    public string $about_page_cta_subtitle;
+
     public static function group(): string
     {
         return 'site';

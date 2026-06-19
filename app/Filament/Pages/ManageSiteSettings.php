@@ -92,6 +92,42 @@ class ManageSiteSettings extends SettingsPage
                                     ]),
                             ]),
 
+                        Tab::make('Hakkımda Sayfası')
+                            ->icon('heroicon-o-user')
+                            ->schema([
+                                Section::make('Üst Tanıtım Alanı')
+                                    ->description('Hakkımda sayfasındaki üst bölüm (isim, unvan, bio).')
+                                    ->schema([
+                                        TextInput::make('about_page_subtitle')
+                                            ->label('Alt Başlık / Unvan')
+                                            ->required()
+                                            ->maxLength(100)
+                                            ->placeholder('Örn: Uzman Klinik Psikolog'),
+                                        Textarea::make('about_page_bio')
+                                            ->label('Tanıtım Metni')
+                                            ->required()
+                                            ->rows(5)
+                                            ->maxLength(1000)
+                                            ->helperText('Hakkımda sayfasının üst kısmındaki kısa biyografi.')
+                                            ->columnSpanFull(),
+                                    ]),
+
+                                Section::make('Çağrı Aksiyonu (CTA)')
+                                    ->description('Sayfanın altındaki renkli çağrı bölümü.')
+                                    ->schema([
+                                        TextInput::make('about_page_cta_title')
+                                            ->label('CTA Başlık')
+                                            ->required()
+                                            ->maxLength(255)
+                                            ->placeholder('Örn: Hemen Danışmanlık Alın!'),
+                                        TextInput::make('about_page_cta_subtitle')
+                                            ->label('CTA Alt Metin')
+                                            ->required()
+                                            ->maxLength(500)
+                                            ->placeholder('Örn: Profesyonel ve deneyimli psikolog olarak...'),
+                                    ]),
+                            ]),
+
                         Tab::make('Anasayfa')
                             ->icon('heroicon-o-home')
                             ->schema([
