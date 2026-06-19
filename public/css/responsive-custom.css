@@ -713,6 +713,16 @@ video {
 }
 
 /* ============================================
+   Hero (img-box-01) arka plan overlay'i
+   Gerçek foto üzerinde ortalı beyaz metnin net
+   okunması için karartmayı güçlendir (şablonda 0.3).
+   ============================================ */
+
+.img-box-01::before {
+    opacity: 0.55;
+}
+
+/* ============================================
    Print Media (Yazdırma)
    ============================================ */
 
