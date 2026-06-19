@@ -1,0 +1,26 @@
+services:
+  # Uretim ortami icin PHP-FPM override
+  app:
+    build:
+      target: production
+    volumes:
+      - storage_data:/var/www/html/storage/app
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+
+  # Nginx - uretim portlari
+  nginx:
+    ports:
+      - "80:80"
+      - "443:443"
+
+  # Let's Encrypt Certbot - SSL sertifika yenileme
+  certbot:
+    image: certbot/certbot
+    container_name: hc_certbot
+    restart: unless-stopped
+    volumes:
+      - certbot_conf:/etc/letsencrypt
+      - certbot_www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

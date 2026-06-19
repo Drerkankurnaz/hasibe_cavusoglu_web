@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\TestimonialResource\Pages;
 use App\Models\Testimonial;
+use Filament\Actions;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
@@ -109,7 +110,7 @@ class TestimonialResource extends Resource
                     ->falseLabel('Onaysız'),
             ])
             ->actions([
-                Tables\Actions\Action::make('approve')
+                Actions\Action::make('approve')
                     ->label('Onayla')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -117,7 +118,7 @@ class TestimonialResource extends Resource
                     ->visible(fn (Testimonial $record) => !$record->is_approved)
                     ->requiresConfirmation(),
 
-                Tables\Actions\Action::make('disapprove')
+                Actions\Action::make('disapprove')
                     ->label('Onayı Kaldır')
                     ->icon('heroicon-o-x-circle')
                     ->color('danger')
@@ -125,12 +126,12 @@ class TestimonialResource extends Resource
                     ->visible(fn (Testimonial $record) => $record->is_approved)
                     ->requiresConfirmation(),
 
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Actions\EditAction::make(),
+                Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Actions\BulkActionGroup::make([
+                    Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }

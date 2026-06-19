@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             SiteSettingsSeeder::class,
             ServiceSeeder::class,
+            PageSeeder::class,
             PostSeeder::class,
             FaqSeeder::class,
             TestimonialSeeder::class,

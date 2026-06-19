@@ -20,15 +20,21 @@ class SiteSettingsSeeder extends Seeder
         $settings->whatsapp = '+905551234567';
         $settings->email = 'info@hasibecavusoglu.com';
         $settings->address = 'Atatürk Mah. Cumhuriyet Cad. No:42/3, Kadıköy, İstanbul';
-        $settings->map_embed = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.6504900697386!2d29.0562!3d40.9903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>';
+        // API anahtarı gerektirmeyen, adres tabanlı Google Maps embed (q= formatı).
+        // Google'ın "pb=" formatı yalnızca Google tarafından üretilen imzalı kodla
+        // çalışır; elle düzenlenince "Invalid pb parameter" hatası verir.
+        $mapQuery = rawurlencode($settings->address);
+        $settings->map_embed = '<iframe src="https://maps.google.com/maps?q=' . $mapQuery . '&hl=tr&z=15&output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+        // Anahtarlar 'label'/'value' olmalı — admin paneli (ManageSiteSettings)
+        // ve footer/header blade şablonları bu anahtarları okur.
         $settings->working_hours = [
-            ['day' => 'Pazartesi', 'hours' => '09:00 - 18:00'],
-            ['day' => 'Salı', 'hours' => '09:00 - 18:00'],
-            ['day' => 'Çarşamba', 'hours' => '09:00 - 18:00'],
-            ['day' => 'Perşembe', 'hours' => '09:00 - 18:00'],
-            ['day' => 'Cuma', 'hours' => '09:00 - 18:00'],
-            ['day' => 'Cumartesi', 'hours' => '10:00 - 14:00'],
-            ['day' => 'Pazar', 'hours' => 'Kapalı'],
+            ['label' => 'Pazartesi', 'value' => '09:00 - 18:00'],
+            ['label' => 'Salı', 'value' => '09:00 - 18:00'],
+            ['label' => 'Çarşamba', 'value' => '09:00 - 18:00'],
+            ['label' => 'Perşembe', 'value' => '09:00 - 18:00'],
+            ['label' => 'Cuma', 'value' => '09:00 - 18:00'],
+            ['label' => 'Cumartesi', 'value' => '10:00 - 14:00'],
+            ['label' => 'Pazar', 'value' => 'Kapalı'],
         ];
         $settings->social_links = [
             ['platform' => 'facebook', 'url' => 'https://facebook.com/hasibecavusoglu'],

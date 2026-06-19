@@ -74,6 +74,8 @@
                                     <a href="{{ route('services.show', $service->slug) }}">
                                         @if($service->image)
                                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}">
+                                        @elseif($service->icon)
+                                            <img src="{{ asset('img/services/treatments/' . $service->icon) }}" alt="{{ $service->title }}">
                                         @else
                                             <img src="{{ asset('img/about_us/owl/owl_img_01.jpg') }}" alt="{{ $service->title }}">
                                         @endif

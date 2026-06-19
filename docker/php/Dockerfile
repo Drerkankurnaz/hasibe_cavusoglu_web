@@ -5,12 +5,12 @@ FROM composer:2 AS composer-deps
 
 WORKDIR /app
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist
+RUN composer install --no-dev --no-scripts --no-autoloader --prefer-dist --ignore-platform-reqs
 
 # ============================================
 # Stage 2: PHP-FPM Production Image
 # ============================================
-FROM php:8.3-fpm-alpine AS production
+FROM php:8.4-fpm-alpine AS production
 
 # Sistem bağımlılıkları
 RUN apk add --no-cache \
@@ -21,6 +21,7 @@ RUN apk add --no-cache \
     libzip-dev \
     icu-dev \
     imagemagick-dev \
+    oniguruma-dev \
     pcre-dev \
     linux-headers \
     fcgi \
@@ -28,18 +29,18 @@ RUN apk add --no-cache \
     && pecl install redis imagick \
     && docker-php-ext-enable redis imagick \
     && docker-php-ext-configure gd \
-        --with-freetype \
-        --with-jpeg \
-        --with-webp \
+    --with-freetype \
+    --with-jpeg \
+    --with-webp \
     && docker-php-ext-install -j$(nproc) \
-        pdo_mysql \
-        mbstring \
-        exif \
-        pcntl \
-        bcmath \
-        gd \
-        zip \
-        intl \
+    pdo_mysql \
+    mbstring \
+    exif \
+    pcntl \
+    bcmath \
+    gd \
+    zip \
+    intl \
     && apk del $PHPIZE_DEPS linux-headers pcre-dev
 
 # PHP log dizini
@@ -66,10 +67,13 @@ RUN composer dump-autoload --optimize --no-dev
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
+# Entrypoint script
+COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 # Health check
-HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-    CMD SCRIPT_NAME=/ping SCRIPT_FILENAME=/ping REQUEST_METHOD=GET \
-    cgi-fcgi -bind -connect 127.0.0.1:9000 || exit 1
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 --start-period=10s \
+    CMD php -r "echo 'OK';" || exit 1
 
 EXPOSE 9000
-CMD ["php-fpm"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

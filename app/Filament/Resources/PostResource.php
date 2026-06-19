@@ -7,6 +7,7 @@ use App\Filament\Resources\PostResource\Pages;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\Tag;
+use Filament\Actions;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Tabs;
@@ -184,7 +185,7 @@ class PostResource extends Resource
                     ->relationship('category', 'name'),
             ])
             ->actions([
-                Tables\Actions\Action::make('publish')
+                Actions\Action::make('publish')
                     ->label('Yayınla')
                     ->icon('heroicon-o-check-circle')
                     ->color('success')
@@ -198,7 +199,7 @@ class PostResource extends Resource
                             'published_at' => $record->published_at ?? now(),
                         ]);
                     }),
-                Tables\Actions\Action::make('unpublish')
+                Actions\Action::make('unpublish')
                     ->label('Taslağa Al')
                     ->icon('heroicon-o-x-circle')
                     ->color('warning')
@@ -211,12 +212,12 @@ class PostResource extends Resource
                             'status' => PostStatus::Draft,
                         ]);
                     }),
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Actions\EditAction::make(),
+                Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                Actions\BulkActionGroup::make([
+                    Actions\DeleteBulkAction::make(),
                 ]),
             ])
             ->defaultSort('created_at', 'desc');

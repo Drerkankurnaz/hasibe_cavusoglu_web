@@ -36,6 +36,14 @@
     <meta name="msapplication-TileImage" content="{{ asset('img/favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
+    {{-- Cache-busting yardımcısı: CSS değişince tarayıcı önbelleğini otomatik tazeler --}}
+    @php
+        $cssVersion = fn (string $path) => asset($path) . '?v=' . (@filemtime(public_path($path)) ?: '1');
+    @endphp
+
+    {{-- Fontlar (self-host, Türkçe latin-ext desteği dahil — Figtree & Montserrat) --}}
+    <link rel="stylesheet" href="{{ $cssVersion('css/fonts.css') }}">
+
     {{-- Bootstrap v3.3.7 --}}
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
@@ -43,10 +51,10 @@
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
     {{-- Main style --}}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ $cssVersion('css/style.css') }}">
 
     {{-- Responsive Custom --}}
-    <link rel="stylesheet" href="{{ asset('css/responsive-custom.css') }}">
+    <link rel="stylesheet" href="{{ $cssVersion('css/responsive-custom.css') }}">
 
     {{-- CSRF Token --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
