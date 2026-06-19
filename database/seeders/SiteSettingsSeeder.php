@@ -19,7 +19,7 @@ class SiteSettingsSeeder extends Seeder
         $settings->phone = '+90 555 123 45 67';
         $settings->whatsapp = '+905551234567';
         $settings->email = 'info@hasibecavusoglu.com';
-        $settings->address = 'Atatürk Mah. Cumhuriyet Cad. No:42/3, Kadıköy, İstanbul';
+        $settings->address = 'Öğretmenevleri Mah. 922. Sokak No:3 Duran Plaza Kat:3 D:18, Konyaaltı / Antalya';
         // API anahtarı gerektirmeyen, adres tabanlı Google Maps embed (q= formatı).
         // Google'ın "pb=" formatı yalnızca Google tarafından üretilen imzalı kodla
         // çalışır; elle düzenlenince "Invalid pb parameter" hatası verir.

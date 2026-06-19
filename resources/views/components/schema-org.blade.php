@@ -23,13 +23,13 @@
             'address' => [
                 '@type' => 'PostalAddress',
                 'streetAddress' => $settings->address ?? '',
-                'addressLocality' => 'Istanbul',
-                'addressRegion' => 'Istanbul',
+                'addressLocality' => 'Konyaaltı',
+                'addressRegion' => 'Antalya',
                 'addressCountry' => 'TR',
             ],
             'medicalSpecialty' => 'Psychiatric',
             'priceRange' => '$$',
-            'areaServed' => ['@type' => 'City', 'name' => 'Istanbul'],
+            'areaServed' => ['@type' => 'City', 'name' => 'Antalya'],
             'inLanguage' => 'tr',
         ];
         
@@ -66,8 +66,8 @@
             'address' => [
                 '@type' => 'PostalAddress',
                 'streetAddress' => $settings->address ?? '',
-                'addressLocality' => 'Istanbul',
-                'addressRegion' => 'Istanbul',
+                'addressLocality' => 'Konyaaltı',
+                'addressRegion' => 'Antalya',
                 'addressCountry' => 'TR',
             ],
             'knowsAbout' => [
