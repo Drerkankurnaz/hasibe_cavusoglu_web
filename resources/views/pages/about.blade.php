@@ -45,13 +45,6 @@
                         <p class="about-me-meta">Hemen Arayın ve
                             <a href="{{ route('appointment.create') }}">Randevu Alın</a>
                         </p>
-                        <p class="about-me-phone">
-                            <span class="about-me-p-01">{{ $settings->phone ?? '' }}</span>
-                            @if($settings->whatsapp)
-                                veya
-                                <span class="about-me-p-02">{{ $settings->whatsapp }}</span>
-                            @endif
-                        </p>
                         <div class="about-me-author">
                             <div class="about-me-author__img">
                                 <img src="{{ asset('img/about_me/about_me_img_02.png') }}" alt="Hasibe Çavuşoğlu">

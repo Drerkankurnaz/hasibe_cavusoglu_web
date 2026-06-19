@@ -16,8 +16,8 @@ class SiteSettingsSeeder extends Seeder
 
         $settings->logo = null;
         $settings->favicon = null;
-        $settings->phone = '+90 555 123 45 67';
-        $settings->whatsapp = '+905551234567';
+        $settings->phone = '+90 507 057 29 04';
+        $settings->whatsapp = '+905070572904';
         $settings->email = 'info@hasibecavusoglu.com';
         $settings->address = 'Öğretmenevleri Mah. 922. Sokak No:3 Duran Plaza Kat:3 D:18, Konyaaltı / Antalya';
         // API anahtarı gerektirmeyen Google Maps embed.
@@ -49,7 +49,7 @@ class SiteSettingsSeeder extends Seeder
         $settings->hero_title = 'Uzman Psikolog Hasibe Çavuşoğlu';
         $settings->hero_subtitle = 'Bireysel terapi, çift terapisi ve aile danışmanlığı alanlarında profesyonel psikolojik destek sunuyorum. Siz de ilk adımı atın.';
         $settings->hero_cta_text = 'Randevu Alın';
-        $settings->footer_text = '© ' . date('Y') . ' Psikolog Hasibe Çavuşoğlu. Tüm hakları saklıdır. | OtiMeta2026';
+        $settings->footer_text = '© ' . date('Y') . ' Design By Otimeta Tüm hakları saklıdır.';
         $settings->ga_id = null;
         $settings->default_meta_description = 'Uzman Psikolog Hasibe Çavuşoğlu - İstanbul\'da bireysel terapi, çift terapisi, aile danışmanlığı ve psikolojik danışmanlık hizmetleri.';
 

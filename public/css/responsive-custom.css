@@ -250,8 +250,20 @@ video {
     }
 
     .header-box-01 .logo img {
-        max-height: 45px;
+        max-height: 100px;
         width: auto;
+    }
+
+    .header-box-01 .logo {
+        justify-content: center;
+    }
+
+    .logo-text strong {
+        font-size: 22px;
+    }
+
+    .logo-text small {
+        font-size: 13px;
     }
 
     /* Telefon bilgisi mobil */
@@ -310,13 +322,16 @@ video {
         min-height: auto !important;
     }
 
-    .img-box-02 .title-06 {
-        font-size: 22px;
-        line-height: 30px;
+    .img-box-02 .title-06,
+    .img-box-01 .title-06 {
+        font-size: 34px;
+        line-height: 42px;
     }
 
-    .img-box-02 .subtitle-07 {
-        font-size: 12px;
+    .img-box-02 .subtitle-07,
+    .img-box-01 .subtitle-07 {
+        font-size: 13px;
+        line-height: 20px;
         letter-spacing: 1px;
     }
 
@@ -556,13 +571,16 @@ video {
         padding-bottom: 35px !important;
     }
 
-    .img-box-02 .title-06 {
-        font-size: 18px;
-        line-height: 26px;
+    .img-box-02 .title-06,
+    .img-box-01 .title-06 {
+        font-size: 27px;
+        line-height: 34px;
     }
 
-    .img-box-02 .subtitle-07 {
-        font-size: 11px;
+    .img-box-02 .subtitle-07,
+    .img-box-01 .subtitle-07 {
+        font-size: 12px;
+        line-height: 18px;
     }
 
     /* Çok küçük ekranlar için ek düzenlemeler */
@@ -624,7 +642,15 @@ video {
 
     /* Logo daha küçük */
     .header-box-01 .logo img {
-        max-height: 38px;
+        max-height: 80px;
+    }
+
+    .logo-text strong {
+        font-size: 20px;
+    }
+
+    .logo-text small {
+        font-size: 12px;
     }
 
     /* Telefon bilgisi küçültme */

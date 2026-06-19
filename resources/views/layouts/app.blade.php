@@ -64,6 +64,20 @@
 
 <body>
 
+    {{-- Açılış ekranı (preloader): logo + yükleme animasyonu --}}
+    @php($preSettings = app(\App\Settings\SiteSettings::class))
+    <div id="site-preloader" class="site-preloader">
+        <div class="site-preloader__inner">
+            <div class="site-preloader__logo">
+                <img src="{{ $preSettings->logo ? asset('storage/' . $preSettings->logo) : asset('img/logo.png') }}"
+                     alt="{{ config('app.name', 'Hasibe Çavuşoğlu') }}">
+            </div>
+            <p class="site-preloader__name">Hasibe Çavuşoğlu</p>
+            <span class="site-preloader__sub">Klinik Psikolog</span>
+            <div class="site-preloader__spinner" aria-hidden="true"></div>
+        </div>
+    </div>
+
     <div class="wrapp-content">
 
         {{-- Header --}}
@@ -101,6 +115,21 @@
     @hasSection('schema-org')
         @yield('schema-org')
     @endif
+
+    {{-- Açılış ekranını sayfa yüklenince gizle (takılırsa en geç 4 sn sonra) --}}
+    <script>
+        (function () {
+            var pre = document.getElementById('site-preloader');
+            if (!pre) return;
+            var hide = function () {
+                if (pre.classList.contains('is-hidden')) return;
+                pre.classList.add('is-hidden');
+                setTimeout(function () { if (pre && pre.parentNode) pre.parentNode.removeChild(pre); }, 700);
+            };
+            window.addEventListener('load', function () { setTimeout(hide, 350); });
+            setTimeout(hide, 4000);
+        })();
+    </script>
 
 </body>
 

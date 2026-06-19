@@ -231,3 +231,4 @@
 | Makefile | 2025-07-21 | 2.0KB |
 | docker/php/entrypoint.sh | 2026-06-18 | 892B |
 | deploy-remote.sh | 2026-06-19 | 2.1KB |
+| database/migrations/2024_01_02_000010_update_footer_text_setting.php | 2026-06-19 | 620B |

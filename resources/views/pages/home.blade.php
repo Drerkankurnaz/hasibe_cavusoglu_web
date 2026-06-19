@@ -18,8 +18,6 @@
                     <h1 class="title-06">
                         {!! nl2br(e($settings->hero_title)) !!}
                     </h1>
-                    <a class="btn-02" href="{{ route('about') }}">Hakkımda</a>
-                    <a class="btn-03" href="{{ route('appointment.create') }}">{{ $settings->hero_cta_text ?: 'Randevu Al' }}</a>
                 </div>
             </div>
         </div>
@@ -65,13 +63,6 @@
                         </div>
                         <p class="about-me-meta">Hemen arayın ve
                             <a href="{{ route('appointment.create') }}">randevu oluşturun</a>
-                        </p>
-                        <p class="about-me-phone">
-                            <span class="about-me-p-01">{{ $settings->phone }}</span>
-                            @if($settings->whatsapp)
-                                veya
-                                <span class="about-me-p-02">{{ $settings->whatsapp }}</span>
-                            @endif
                         </p>
                     </div>
                 </div>
@@ -346,7 +337,7 @@
                         <figure class="featured-post-01__img">
                             <a href="{{ route('blog.show', $post->slug) }}">
                                 @if($post->cover_image)
-                                    <img src="{{ asset('storage/' . $post->cover_image) }}" alt="{{ $post->title }}">
+                                    <img src="{{ asset('img/blog/' . $post->cover_image) }}" alt="{{ $post->title }}">
                                 @else
                                     <img src="{{ asset('img/shortcodes/featured_post/featured_post_01.jpg') }}" alt="{{ $post->title }}">
                                 @endif

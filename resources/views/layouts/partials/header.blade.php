@@ -43,6 +43,10 @@
                         @else
                             <img src="{{ asset('img/logo.png') }}" alt="Psikolog Hasibe Çavuşoğlu">
                         @endif
+                        <span class="logo-text">
+                            <strong>Hasibe Çavuşoğlu</strong>
+                            <small>Klinik Psikolog</small>
+                        </span>
                     </a>
                 </div>
                 <div class="col-sm-8 col-md-8 col-lg-8 text-xs-center text-right">

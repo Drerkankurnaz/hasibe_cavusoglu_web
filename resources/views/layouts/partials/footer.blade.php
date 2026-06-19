@@ -115,7 +115,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copy-footer-01__text">{{ $settings->footer_text }}</p>
+                    <p class="copy-footer-01__text">&copy; {{ date('Y') }} Design By <a href="https://www.otimeta.com" target="_blank" rel="noopener noreferrer">Otimeta</a> Tüm hakları saklıdır.</p>
                 </div>
             </div>
         </div>

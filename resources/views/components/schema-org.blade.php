@@ -104,7 +104,7 @@
         ];
         
         if ($post->cover_image) {
-            $articleSchema['image'] = asset('storage/' . $post->cover_image);
+            $articleSchema['image'] = asset('img/blog/' . $post->cover_image);
         }
         
         $schemas[] = $articleSchema;
