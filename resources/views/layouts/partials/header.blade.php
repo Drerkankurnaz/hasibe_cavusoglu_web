@@ -44,8 +44,8 @@
                             <img src="{{ asset('img/logo.png') }}" alt="Psikolog Hasibe Çavuşoğlu">
                         @endif
                         <span class="logo-text">
-                            <strong>Hasibe Çavuşoğlu</strong>
-                            <small>Klinik Psikolog</small>
+                            <strong>{{ $settings->logo_name }}</strong>
+                            <small>{{ $settings->logo_title }}</small>
                         </span>
                     </a>
                 </div>

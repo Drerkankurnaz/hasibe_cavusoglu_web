@@ -52,6 +52,16 @@ class ManageSiteSettings extends SettingsPage
                                             ->disk('public')
                                             ->directory('site')
                                             ->nullable(),
+                                        TextInput::make('logo_name')
+                                            ->label('Logo Yanı İsim')
+                                            ->required()
+                                            ->maxLength(100)
+                                            ->placeholder('Hasibe Çavuşoğlu'),
+                                        TextInput::make('logo_title')
+                                            ->label('Logo Yanı Unvan')
+                                            ->required()
+                                            ->maxLength(100)
+                                            ->placeholder('Klinik Psikolog'),
                                     ])
                                     ->columns(2),
 
@@ -89,6 +99,11 @@ class ManageSiteSettings extends SettingsPage
                                             ->label('Footer Metni')
                                             ->required()
                                             ->maxLength(500),
+                                        TextInput::make('footer_description')
+                                            ->label('Footer Açıklama Metni')
+                                            ->required()
+                                            ->maxLength(255)
+                                            ->helperText('Logo altındaki kısa açıklama'),
                                     ]),
                             ]),
 

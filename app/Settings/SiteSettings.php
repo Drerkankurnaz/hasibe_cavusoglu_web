@@ -47,6 +47,11 @@ class SiteSettings extends Settings
     public string $about_page_cta_title;
     public string $about_page_cta_subtitle;
 
+    // Header & Footer ek metinler
+    public string $logo_name;
+    public string $logo_title;
+    public string $footer_description;
+
     public static function group(): string
     {
         return 'site';

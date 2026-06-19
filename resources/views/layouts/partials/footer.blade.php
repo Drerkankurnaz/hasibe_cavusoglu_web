@@ -19,7 +19,7 @@
                         @endif
                     </a>
                     <div class="widget widget-text">
-                        <p>Profesyonel psikolojik danışmanlık hizmetleri ile yanınızdayız.</p>
+                        <p>{{ $settings->footer_description }}</p>
                         @if(!empty($settings->social_links))
                             <ul class="social-list-01">
                                 @foreach($settings->social_links as $social)
