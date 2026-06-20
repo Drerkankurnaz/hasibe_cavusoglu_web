@@ -103,7 +103,7 @@ class PostSeeder extends Seeder
             $category = Category::where('slug', $categorySlug)->first();
             $postData['category_id'] = $category?->id;
 
-            $post = Post::create($postData);
+            $post = Post::updateOrCreate(['slug' => $postData['slug']], $postData);
 
             $tagIds = Tag::whereIn('slug', $tagSlugs)->pluck('id');
             $post->tags()->sync($tagIds);
@@ -123,8 +123,13 @@ class PostSeeder extends Seeder
         }
 
         $disk = Storage::disk('public');
+        $allowed = ['jpg', 'jpeg', 'png', 'webp'];
 
-        foreach (glob($source.'/*.{jpg,jpeg,png,webp}', GLOB_BRACE) ?: [] as $file) {
+        foreach (glob($source.'/*') ?: [] as $file) {
+            if (! in_array(strtolower(pathinfo($file, PATHINFO_EXTENSION)), $allowed, true)) {
+                continue;
+            }
+
             $target = 'posts/'.basename($file);
 
             if (! $disk->exists($target)) {
