@@ -75,12 +75,11 @@
         </div>
     </div>
 
-    {{-- Banner kutuları (index_02: banners-wrapp) — ilk 3 hizmete dinamik --}}
-    @php $bannerServices = $services->take(3); @endphp
-    @if($bannerServices->count() > 0)
+    {{-- Banner kutuları (index_02: banners-wrapp) — tüm hizmetler --}}
+    @if($services->count() > 0)
     <div class="banners-wrapp pad-bt-10">
         <div class="banners-wrapp-cont">
-            @foreach($bannerServices as $index => $service)
+            @foreach($services as $index => $service)
             <div class="banners-box-01">
                 <figure class="banners-box-01__img">
                     <a href="{{ route('services.show', $service->slug) }}">
