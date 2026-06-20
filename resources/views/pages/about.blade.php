@@ -36,7 +36,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <div class="about-me-cont-02">
                         <p class="subtitle-01">{{ $settings->about_page_subtitle }}</p>
-                        <h3 class="title-03">Merhaba! Ben
+                        <h3 class="title-03">
                             <span>Hasibe Çavuşoğlu</span>
                         </h3>
                         <div class="about-me-text-01">
@@ -46,9 +46,6 @@
                             <a href="{{ route('appointment.create') }}">Randevu Alın</a>
                         </p>
                         <div class="about-me-author">
-                            <div class="about-me-author__img">
-                                <img src="{{ asset('img/about_me/about_me_img_02.png') }}" alt="Hasibe Çavuşoğlu">
-                            </div>
                             <div class="about-me-author__text">
                                 <p>
                                     <strong>Hasibe Çavuşoğlu</strong>,
