@@ -1292,6 +1292,8 @@ ol li::before {
 
 .content-box-03 {
 	background-color: #4eaac8;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .content-box-03::after {
@@ -7319,6 +7321,14 @@ ol li::before {
 
 .faq-content-03 .contacts_map {
 	margin-bottom: 0;
+	height: 100%;
+}
+
+.faq-content-03 .contacts_map iframe {
+	width: 100%;
+	height: 100%;
+	min-height: 500px;
+	border: none;
 }
 
 .faq-content-03 #map-canvas {
@@ -11765,6 +11775,7 @@ ol li::before {
 	color: #42474c;
 	padding: 23px 0;
 	margin: 0;
+	text-align: center;
 }
 
 .copy-footer-01__text a {
