@@ -52,13 +52,22 @@ ssh $SERVER "cd $REMOTE_DIR && \
 echo "   ✅ Konteynerler çalışıyor"
 echo ""
 
-# 4. Migrasyon + Seeder (MySQL hazır olana kadar retry)
-echo "🗄️  [4/5] Migrasyon ve seeder çalıştırılıyor..."
+# 4. Migrasyon + cache (MySQL hazır olana kadar retry)
+# Seeder yalnızca ilk kurulumda (users tablosu boşken) çalışır — sonraki
+# deploy'larda panelden girilen içeriğin üzerine yazmaması için atlanır.
+# Zorlamak gerekirse: SEED=1 ./deploy-remote.sh
+echo "🗄️  [4/5] Migrasyon ve cache çalıştırılıyor..."
 ssh $SERVER "cd $REMOTE_DIR && \
   for i in \$(seq 1 15); do \
     docker compose exec -T app php artisan migrate --force 2>/dev/null && break || { echo '   ⏳ DB bekleniyor... ('\$i'/15)'; sleep 5; }; \
   done && \
-  docker compose exec -T app php artisan db:seed --force 2>/dev/null || true && \
+  USERS=\$(docker compose exec -T app php artisan tinker --execute='echo \App\Models\User::count();' 2>/dev/null | tr -dc '0-9') && \
+  if [ \"${SEED:-0}\" = '1' ] || [ \"\$USERS\" = '0' ]; then \
+    echo '   🌱 Seeder çalıştırılıyor (ilk kurulum veya SEED=1)'; \
+    docker compose exec -T app php artisan db:seed --force; \
+  else \
+    echo \"   ⏭  Seeder atlandı — mevcut içerik korunuyor (\$USERS kullanıcı kayıtlı)\"; \
+  fi && \
   docker compose exec -T app php artisan config:cache && \
   docker compose exec -T app php artisan route:cache && \
   docker compose exec -T app php artisan view:cache && \
