@@ -67,7 +67,7 @@ class ServiceResource extends Resource
                                     ->label('Görsel')
                                     ->image()
                                     ->directory('services')
-                                    ->maxSize(2048)
+                                    ->maxSize(10240)
                                     ->imageResizeMode('cover')
                                     ->imageCropAspectRatio('4:3')
                                     ->imageResizeTargetWidth('800')

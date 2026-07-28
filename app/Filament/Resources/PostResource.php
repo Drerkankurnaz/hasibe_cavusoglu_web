@@ -91,7 +91,7 @@ class PostResource extends Resource
                                     ->label('Kapak Görseli')
                                     ->image()
                                     ->directory('posts')
-                                    ->maxSize(2048)
+                                    ->maxSize(10240)
                                     ->imageResizeMode('cover')
                                     ->imageCropAspectRatio('16:9')
                                     ->imageResizeTargetWidth('1200')
