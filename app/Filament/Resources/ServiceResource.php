@@ -71,7 +71,9 @@ class ServiceResource extends Resource
                                     ->imageResizeMode('cover')
                                     ->imageCropAspectRatio('4:3')
                                     ->imageResizeTargetWidth('800')
-                                    ->imageResizeTargetHeight('600'),
+                                    ->imageResizeTargetHeight('600')
+                                    ->preserveFilenames()
+                                    ->dehydrated(),
 
                                 Forms\Components\TextInput::make('price')
                                     ->label('Fiyat')

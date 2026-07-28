@@ -95,7 +95,9 @@ class PostResource extends Resource
                                     ->imageResizeMode('cover')
                                     ->imageCropAspectRatio('16:9')
                                     ->imageResizeTargetWidth('1200')
-                                    ->imageResizeTargetHeight('675'),
+                                    ->imageResizeTargetHeight('675')
+                                    ->preserveFilenames()
+                                    ->dehydrated(),
                             ])
                             ->columns(2),
 
