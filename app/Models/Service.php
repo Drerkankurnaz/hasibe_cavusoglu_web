@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Appointment;
+use App\Models\Concerns\RecordsSlugHistory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -12,6 +13,7 @@ use Spatie\Sluggable\SlugOptions;
 class Service extends Model
 {
     use HasSlug;
+    use RecordsSlugHistory;
 
     protected $fillable = [
         'title',

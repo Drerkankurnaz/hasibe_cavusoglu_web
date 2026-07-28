@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\PostStatus;
+use App\Models\Concerns\RecordsSlugHistory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -13,6 +14,7 @@ use Spatie\Sluggable\SlugOptions;
 class Post extends Model
 {
     use HasSlug;
+    use RecordsSlugHistory;
 
     protected $fillable = [
         'title',
