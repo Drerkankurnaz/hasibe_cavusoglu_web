@@ -90,6 +90,8 @@ class PostResource extends Resource
                                 Forms\Components\FileUpload::make('cover_image')
                                     ->label('Kapak Görseli')
                                     ->image()
+                                    ->disk('public')
+                                    ->visibility('public')
                                     ->directory('posts')
                                     ->maxSize(10240)
                                     ->imageResizeMode('cover')

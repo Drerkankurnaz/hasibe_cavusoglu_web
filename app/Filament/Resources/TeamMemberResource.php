@@ -53,6 +53,8 @@ class TeamMemberResource extends Resource
                         Components\FileUpload::make('photo')
                             ->label('Fotoğraf')
                             ->image()
+                            ->disk('public')
+                            ->visibility('public')
                             ->directory('team-members')
                             ->imageResizeMode('cover')
                             ->imageCropAspectRatio('1:1')

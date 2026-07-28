@@ -66,6 +66,8 @@ class ServiceResource extends Resource
                                 Forms\Components\FileUpload::make('image')
                                     ->label('Görsel')
                                     ->image()
+                                    ->disk('public')
+                                    ->visibility('public')
                                     ->directory('services')
                                     ->maxSize(10240)
                                     ->imageResizeMode('cover')
